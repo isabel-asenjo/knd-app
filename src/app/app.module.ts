@@ -28,6 +28,7 @@ import { environment } from 'src/environments/environment';*/
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AdminMainPageComponent } from './pages/admin-main-page/admin-main-page.component';
 //import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
@@ -36,6 +37,7 @@ import { FooterComponent } from './components/footer/footer.component';
     NavbarComponent,
     NavigationComponent,
     FooterComponent,
+    AdminMainPageComponent,
     //HomePageComponent,
   ],
   imports: [
