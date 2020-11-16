@@ -1,0 +1,71 @@
+@import 'src/app/styles/lib/variables';
+
+
+
+.page-footer {
+    font-family: $font-text;
+    font-size: $fs-regular;
+    position: fixed; // cambiar esto para hacer sticky footer
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.links-section {
+    font-size: $fs-regular*1.5;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+
+.footer-links{
+    background-color: $color-transparent-white;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    
+}
+
+
+.footer-list{
+    ul{
+        list-style-type: none;
+        padding:0;
+    }
+}
+
+
+.footer-socials{
+    padding-top: 15px;
+    width: 15%;
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style-type: none;
+        align-items: center; 
+    
+        a{
+            height: 50px;
+        }
+
+        a:hover{
+            cursor: pointer;
+        }
+    
+    }
+    
+}
+
+
+.developed-by{
+    background-color: $color-free-speech-magenta;
+    text-align: center;
+    padding: 5px;
+}
