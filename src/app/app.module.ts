@@ -28,7 +28,7 @@ import { environment } from 'src/environments/environment';*/
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HomePageComponent } from './pages/home-page/home-page.component';
+//import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
     NavbarComponent,
     NavigationComponent,
     FooterComponent,
-    HomePageComponent,
+    //HomePageComponent,
   ],
   imports: [
     BrowserModule,
