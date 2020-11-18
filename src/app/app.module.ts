@@ -13,6 +13,7 @@ import { MatCardModule } from "@angular/material/card";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";*/
+import { SimplebarAngularModule } from 'simplebar-angular';
 
 
 // Firebase Imports
@@ -45,6 +46,7 @@ import { AdminMainPageComponent } from './pages/admin-main-page/admin-main-page.
     AppRoutingModule,
     //HttpModule,
     FormsModule,
+    SimplebarAngularModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

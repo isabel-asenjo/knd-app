@@ -1,0 +1,76 @@
+<!--<div class="container">
+    <ngx-simplebar [options]="options">
+      <div *ngFor="let number of numbers">ngx-simplebar</div>
+    </ngx-simplebar>
+</div>-->
+
+
+<body>
+    <div class="title">
+        <h1>Gestión de la página</h1>
+    </div>
+
+    <div class='sections'>
+        <div class='section-container'>
+            <div class='section-title'>
+                <h2>CRUDS</h2>
+            </div>
+            <div class='section-content'>
+                <!--aquí podría ir un *ngFor para que queden como los cuadritos y tal-->
+                <ul>
+                    <li>
+                        <div class='crud-options' id='categorias'>
+                            CATEGORíAS
+                        </div>
+                    </li>
+                    <li>
+                        <div class='crud-options' id='productos'>
+                            PRODUCTOS
+                        </div>
+                    </li>
+                    <li>
+                        <div class='crud-options' id='retiro'>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class='crud-options' id='pago'>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        
+        <div class='section-container'>
+            <div class='section-title'>
+                <h2>REGISTRO DE VENTAS</h2>
+            </div>
+            <div class='section-content' id='purchase-records'>
+                <ul>
+                    <li> <!--*ngFor="let record of records;-->
+                        <div class='purchase-record'>
+                            <div class='purchase-id'>ID #</div>
+                            <div class='purchase-info'>
+                                <p>blablabla</p>
+                                <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
+                            </div>
+                        </div>
+                    </li>
+                    <li> <!--*ngFor="let record of records;-->
+                        <div class='purchase-record'>
+                            <div class='purchase-id'>ID #</div>
+                            <div class='purchase-info'>
+                                <p>blablabla</p>
+                                <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
