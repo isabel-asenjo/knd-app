@@ -17,12 +17,12 @@ import { SimplebarAngularModule } from 'simplebar-angular';
 
 
 // Firebase Imports
-/*import { AngularFireModule } from '@angular/fire';
+import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireStorageModule } from '@angular/fire/storage';
-import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireStorage, AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/auth';
 // Firebase Configuration
-import { environment } from 'src/environments/environment';*/
+import { environment } from 'src/environments/environment';
 
 
 // nuestros components
@@ -47,6 +47,10 @@ import { AdminMainPageComponent } from './pages/admin-main-page/admin-main-page.
     //HttpModule,
     FormsModule,
     SimplebarAngularModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireStorageModule,
+    AngularFirestoreModule,
+    AngularFireAuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
