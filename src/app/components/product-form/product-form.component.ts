@@ -1,0 +1,46 @@
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Product } from 'src/app/models/product';
+import { ProductsService } from 'src/app/services/products.service';
+
+@Component({
+  selector: 'app-product-form',
+  templateUrl: './product-form.component.html',
+  styleUrls: ['./product-form.component.scss']
+})
+export class ProductFormComponent implements OnInit {
+  productForm: FormGroup = null;
+
+  constructor(private productService: ProductsService, private fb: FormBuilder, private router: Router) { }
+
+  ngOnInit(): void {
+    this.createForm();
+  }
+
+  createForm(): void{
+    this.productForm = this.fb.group({
+      name: [''],
+      description: [''],
+      price: [''],
+      category: [''],
+    })
+  }
+
+  createProduct(newProduct: Product): void{
+    this.productService.createProduct(newProduct).then(res =>{
+       //this.router.navigate('/');
+    }).catch(err => console.log(err));
+  }
+  
+  onSubmit():void{
+    const newProduct: Product = {
+      name: this.productForm.get('name').value,
+      description: this.productForm.get('description').value,
+      price: this.productForm.get('price').value,
+      category: this.productForm.get('category').value,
+    }
+
+    this.createProduct(newProduct);
+  }
+}

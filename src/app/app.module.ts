@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 // Angular Imports
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 /*import { HttpModule } from '@angular/http';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FlexLayoutModule } from "@angular/flex-layout";
@@ -30,6 +30,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AdminMainPageComponent } from './pages/admin-main-page/admin-main-page.component';
+import { ProductFormComponent } from './components/product-form/product-form.component';
 //import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
@@ -39,6 +40,7 @@ import { AdminMainPageComponent } from './pages/admin-main-page/admin-main-page.
     NavigationComponent,
     FooterComponent,
     AdminMainPageComponent,
+    ProductFormComponent,
     //HomePageComponent,
   ],
   imports: [
@@ -46,6 +48,7 @@ import { AdminMainPageComponent } from './pages/admin-main-page/admin-main-page.
     AppRoutingModule,
     //HttpModule,
     FormsModule,
+    ReactiveFormsModule,
     SimplebarAngularModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,

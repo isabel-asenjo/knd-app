@@ -1,0 +1,81 @@
+@import 'src/app/styles/lib/variables';
+
+body {
+    background-image: $color-bg-gradient;
+    height: 100vh;
+}
+
+
+.title{
+    font-family: $font-titles;
+    text-align: center;
+    padding: 15vh;
+}
+
+.sections{
+    display: flex;
+    flex-direction: row;
+    font-family: $font-text;
+    justify-content: space-evenly;
+    
+    .section-title{
+        color: white;
+        background-color: $color-dark-turquoise;
+        padding: 5px 0 5px 0;
+        border-radius: 25px;
+        width: 40vw;
+        text-align: center;
+        font-size: x-large;
+        margin-bottom: 5vh;
+    }
+}
+
+
+
+ul {
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+
+
+.crud-options{
+    background-color: $color-transparent-white;
+}
+
+#purchase-records{
+    background-color: $color-transparent-white;
+    border-radius: 15px;
+
+    .purchase-record{
+        display: flex;
+        flex-direction: row;
+        padding: 5px 20px 5px 20px;
+        font-size: $fs-regular;
+
+        .purchase-id {
+            background-color: $color-dark-turquoise;
+            width: 15%;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            text-align: center;
+            font-size: large;
+        }
+
+        .purchase-info {
+            background-color: white;
+            width: 80%;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+
+            p{
+                padding-left: 2%;
+            }
+        }
+    }
+
+    
+}
