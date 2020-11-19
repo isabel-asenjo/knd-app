@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Product } from 'src/app/models/product';
@@ -14,8 +14,14 @@ export class ProductFormComponent implements OnInit {
 
   constructor(private productService: ProductsService, private fb: FormBuilder, private router: Router) { }
 
+  @Input() editProduct: Product = null;
+
   ngOnInit(): void {
     this.createForm();
+
+    if(this.editProduct){
+      this.pathFormValues();
+    }
   }
 
   createForm(): void{
@@ -27,9 +33,16 @@ export class ProductFormComponent implements OnInit {
     })
   }
 
+  pathFormValues(): void{
+    this.productForm.patchValue({
+      name: this.editProduct.name,
+      
+    })
+  }
+  
   createProduct(newProduct: Product): void{
     this.productService.createProduct(newProduct).then(res =>{
-       //this.router.navigate('/');
+       this.router.navigate(['/admin-cruds']);
     }).catch(err => console.log(err));
   }
   
@@ -43,4 +56,6 @@ export class ProductFormComponent implements OnInit {
 
     this.createProduct(newProduct);
   }
+
+  
 }

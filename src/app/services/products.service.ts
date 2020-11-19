@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection, DocumentChangeAction } from '@angular/fire/firestore';
+import { Action, AngularFirestore, AngularFirestoreCollection, DocumentChangeAction, DocumentSnapshot } from '@angular/fire/firestore';
 import { database } from 'firebase';
 import { Observable } from 'rxjs';
 import { Product } from '../models/product';
@@ -16,6 +16,10 @@ export class ProductsService {
 
   getAllProducts(): Observable<DocumentChangeAction<Product>[]>{
     return this.productCollection.snapshotChanges();
+  }
+
+  getProduct(productId: string): Observable<Action<DocumentSnapshot<Product>>>{
+    return this.productCollection.doc<Product>(productId).snapshotChanges();
   }
   
   createProduct(newProduct: Product): Promise<any> {

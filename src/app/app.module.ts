@@ -37,6 +37,7 @@ import { CrudReadComponent } from './pages/crud-read/crud-read.component';
 import { CrudCreateComponent } from './pages/crud-create/crud-create.component';
 import { CrudUpdateComponent } from './pages/crud-update/crud-update.component';
 import { CrudDeleteComponent } from './pages/crud-delete/crud-delete.component';
+import { DeleteProductComponent } from './components/delete-product/delete-product.component';
 //import { SimplebarAngularModule } from 'simplebar-angular/lib/simplebar-angular.module';
 //import { HomePageComponent } from './pages/home-page/home-page.component';
 
@@ -55,6 +56,7 @@ import { CrudDeleteComponent } from './pages/crud-delete/crud-delete.component';
     CrudCreateComponent,
     CrudUpdateComponent,
     CrudDeleteComponent,
+    DeleteProductComponent,
     //HomePageComponent,
   ],
   imports: [

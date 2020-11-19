@@ -3,11 +3,11 @@ import { Product } from 'src/app/models/product';
 import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
-  selector: 'app-read',
-  templateUrl: './read.component.html',
-  styleUrls: ['./read.component.scss']
+  selector: 'app-delete-product',
+  templateUrl: './delete-product.component.html',
+  styleUrls: ['./delete-product.component.scss']
 })
-export class ReadComponent implements OnInit {
+export class DeleteProductComponent implements OnInit {
 
   products: Array<Product> = [];
 
@@ -29,4 +29,7 @@ export class ReadComponent implements OnInit {
     });
   }
 
+  deleteProduct(productId): void{
+    this.productService.deleteProduct(productId).then(res =>{}).catch(err=>console.log(err));
+  }
 }

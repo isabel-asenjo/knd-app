@@ -20,6 +20,7 @@
                             <th scope="row">{{ product.description }}</th>
                             <th scope="row">{{ product.price }}</th>
                             <th scope="row">{{ product.category }}</th>
+                            <button class='btn btn-danger' (click)='deleteProduct(product.$key)'> Delete Product </button>
                           </tr>
                         </tbody>
                       </table>
@@ -28,4 +29,3 @@
         </ul>
     </div>
 </div>
-        
