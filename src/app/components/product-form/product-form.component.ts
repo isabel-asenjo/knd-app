@@ -65,7 +65,7 @@ export class ProductFormComponent implements OnInit {
   
   createProduct(newProduct: Product): void{
     this.productService.createProduct(newProduct).then(res =>{
-       this.router.navigate(['/admin-cruds']);
+       this.router.navigate(['/admin-cruds/read']);
     }).catch(err => console.log(err));
   }
   
