@@ -36,6 +36,7 @@ import { CrudReadComponent } from './pages/crud-read/crud-read.component';
 import { CrudCreateComponent } from './pages/crud-create/crud-create.component';
 import { CrudUpdateComponent } from './pages/crud-update/crud-update.component';
 import { CrudDeleteComponent } from './pages/crud-delete/crud-delete.component';
+import { DeleteWarningComponent } from './components/delete-warning/delete-warning.component';
 //import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
@@ -52,6 +53,7 @@ import { CrudDeleteComponent } from './pages/crud-delete/crud-delete.component';
     CrudCreateComponent,
     CrudUpdateComponent,
     CrudDeleteComponent,
+    DeleteWarningComponent,
     //HomePageComponent,
   ],
   imports: [
