@@ -13,7 +13,6 @@ import { MatCardModule } from "@angular/material/card";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";*/
-import { SimplebarAngularModule } from 'simplebar-angular';
 
 
 // Firebase Imports
@@ -31,6 +30,14 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { FooterComponent } from './components/footer/footer.component';
 import { AdminMainPageComponent } from './pages/admin-main-page/admin-main-page.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
+import { AdminCrudsComponent } from './pages/admin-cruds/admin-cruds.component';
+import { CrudButtonsComponent } from './components/crud-buttons/crud-buttons.component';
+import { ReadComponent } from './components/read/read.component';
+import { CrudReadComponent } from './pages/crud-read/crud-read.component';
+import { CrudCreateComponent } from './pages/crud-create/crud-create.component';
+import { CrudUpdateComponent } from './pages/crud-update/crud-update.component';
+import { CrudDeleteComponent } from './pages/crud-delete/crud-delete.component';
+//import { SimplebarAngularModule } from 'simplebar-angular/lib/simplebar-angular.module';
 //import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
@@ -41,6 +48,13 @@ import { ProductFormComponent } from './components/product-form/product-form.com
     FooterComponent,
     AdminMainPageComponent,
     ProductFormComponent,
+    AdminCrudsComponent,
+    CrudButtonsComponent,
+    ReadComponent,
+    CrudReadComponent,
+    CrudCreateComponent,
+    CrudUpdateComponent,
+    CrudDeleteComponent,
     //HomePageComponent,
   ],
   imports: [
@@ -49,7 +63,7 @@ import { ProductFormComponent } from './components/product-form/product-form.com
     //HttpModule,
     FormsModule,
     ReactiveFormsModule,
-    SimplebarAngularModule,
+    //SimplebarAngularModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
     AngularFirestoreModule,

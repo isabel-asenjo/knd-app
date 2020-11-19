@@ -3,11 +3,21 @@ import { Routes, RouterModule } from '@angular/router';
 //import { HomePageComponent } from './pages/home-page/home-page.component';
 //import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { AdminMainPageComponent } from './pages/admin-main-page/admin-main-page.component';
+import { AdminCrudsComponent } from './pages/admin-cruds/admin-cruds.component';
+import { CrudReadComponent } from './pages/crud-read/crud-read.component';
+import { CrudCreateComponent } from './pages/crud-create/crud-create.component';
+import { CrudUpdateComponent } from './pages/crud-update/crud-update.component';
+import { CrudDeleteComponent } from './pages/crud-delete/crud-delete.component';
 
 const routes: Routes = [
   //{ path: '', component: HomePageComponent },
   //  { path: 'about', component: AboutUsComponent },
   { path: 'admin', component: AdminMainPageComponent },
+  { path: 'admin-cruds', component: AdminCrudsComponent },
+  { path: 'admin-cruds/create', component: CrudCreateComponent },
+  { path: 'admin-cruds/read', component: CrudReadComponent },
+  { path: 'admin-cruds/update', component: CrudUpdateComponent },
+  { path: 'admin-cruds/delete', component: CrudDeleteComponent },
 ];
 
 @NgModule({

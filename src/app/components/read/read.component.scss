@@ -1,37 +1,5 @@
 @import 'src/app/styles/lib/variables';
 
-body {
-    background-image: $color-bg-gradient;
-    height: 100vh;
-}
-
-
-.title{
-    font-family: $font-titles;
-    text-align: center;
-    padding: 15vh;
-}
-
-.sections{
-    display: flex;
-    flex-direction: row;
-    font-family: $font-text;
-    justify-content: space-evenly;
-    
-    .section-title{
-        color: white;
-        background-color: $color-dark-turquoise;
-        padding: 5px 0 5px 0;
-        border-radius: 25px;
-        width: 40vw;
-        text-align: center;
-        font-size: x-large;
-        margin-bottom: 5vh;
-    }
-}
-
-
-
 ul {
     padding: 0;
 
@@ -40,35 +8,6 @@ ul {
     }
 }
 
-
-
-#cruds{
-    height: 200px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    color: $color-gold;
-    
-}
-
-
-.cruds-ul {
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
-}
-
-
-
-.crud-options{
-    background-color: $color-transparent-white;
-    height: 15vh;
-    width: 30vh;
-    margin: 10px;
-    border-radius: 10px;
-    padding: 2.5%;
-}
 
 #purchase-records{
     background-color: $color-transparent-white;
