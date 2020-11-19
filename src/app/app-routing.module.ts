@@ -8,6 +8,7 @@ import { CrudReadComponent } from './pages/crud-read/crud-read.component';
 import { CrudCreateComponent } from './pages/crud-create/crud-create.component';
 import { CrudUpdateComponent } from './pages/crud-update/crud-update.component';
 import { CrudDeleteComponent } from './pages/crud-delete/crud-delete.component';
+import { CrudUpdateFormComponent } from './pages/crud-update-form/crud-update-form.component';
 
 const routes: Routes = [
   //{ path: '', component: HomePageComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'admin-cruds/read', component: CrudReadComponent },
   { path: 'admin-cruds/update', component: CrudUpdateComponent },
   { path: 'admin-cruds/delete', component: CrudDeleteComponent },
+  { path: 'admin-cruds/:productId/update', component: CrudUpdateFormComponent },
 ];
 
 @NgModule({

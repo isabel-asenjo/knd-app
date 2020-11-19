@@ -88,6 +88,10 @@ ul {
             font-size: large;
         }
 
+        .purchase-id:hover{
+            cursor: pointer;
+        }
+
         .purchase-info {
             background-color: white;
             width: 80%;
@@ -122,4 +126,33 @@ ul {
 .pr-container::-webkit-scrollbar-thumb{
     background: #808080;
     border-radius: 15px;
+}
+
+.modal {
+    text-align: center;
+    h4{
+        color: black;
+        font-family: $font-titles;
+    }
+    .modal-body{
+        color: black;
+        font-size: large;
+    }
+    .btn-danger{
+        background: $color-lavander-rose;
+    }
+}
+
+.decision-btns{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .conf{
+        background-color: $color-dark-turquoise;
+    }
+    .canc{
+        background-color: #333333;
+    }
 }

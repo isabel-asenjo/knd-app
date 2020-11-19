@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/models/product';
 import { ProductsService } from 'src/app/services/products.service';
 
@@ -12,16 +12,37 @@ import { ProductsService } from 'src/app/services/products.service';
 export class ProductFormComponent implements OnInit {
   productForm: FormGroup = null;
 
-  constructor(private productService: ProductsService, private fb: FormBuilder, private router: Router) { }
+  constructor(private productService: ProductsService, private fb: FormBuilder, private router: Router, private route: ActivatedRoute) { }
 
-  @Input() editProduct: Product = null;
+  editProduct: Product = null;
+  productId: string;
 
   ngOnInit(): void {
     this.createForm();
 
-    if(this.editProduct){
-      this.pathFormValues();
-    }
+    this.getUrlParams();
+  }
+
+  getUrlParams(): void {
+    this.route.paramMap.subscribe(params => {
+      this.productId = params.get('productId');
+
+      if(this.productId) {
+        this.productService.getProduct(this.productId).subscribe(item =>{
+          this.editProduct = {
+            ...item.payload.data(),
+            $key: item.payload.id,
+          };
+      
+          this.productForm.patchValue({
+            name: this.editProduct.name,
+            description: this.editProduct.description,
+            price: this.editProduct.price,
+            category: this.editProduct.category,
+          })
+        })
+      }
+    })
   }
 
   createForm(): void{
@@ -36,7 +57,9 @@ export class ProductFormComponent implements OnInit {
   pathFormValues(): void{
     this.productForm.patchValue({
       name: this.editProduct.name,
-      
+      description: this.editProduct.description,
+      price: this.editProduct.price,
+      category: this.editProduct.category,
     })
   }
   

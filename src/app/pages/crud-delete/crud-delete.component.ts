@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
 import { AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Product } from 'src/app/models/product';
 import { ProductsService } from 'src/app/services/products.service';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import {ControlWarningModalService} from 'src/app/services/control-warning-modal.service';
 
 @Component({
   selector: 'app-crud-delete',
@@ -14,6 +15,9 @@ export class CrudDeleteComponent implements OnInit {
   private productCollection: AngularFirestoreCollection<Product>;
   
   constructor(private productService: ProductsService) { }
+  controlWarningModalService = ControlWarningModalService;
+  display: boolean = false;  
+  @Output() onClick = new EventEmitter<any>();
 
   ngOnInit(): void {
     this.getAllProducts();
@@ -35,5 +39,14 @@ export class CrudDeleteComponent implements OnInit {
     this.productService.deleteProduct(productId).then(res =>{}).catch(err=> console.log(err));
   }
 
+  activate(): boolean {
+    this.display = true;
+    console.log(this.display);
+    return this.display;
+  }
+
+  click(event) {
+    this.onClick.emit(true);
+  }
 
 }

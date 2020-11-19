@@ -39,6 +39,9 @@ import { CrudUpdateComponent } from './pages/crud-update/crud-update.component';
 import { CrudDeleteComponent } from './pages/crud-delete/crud-delete.component';
 import { DeleteProductComponent } from './components/delete-product/delete-product.component';
 //import { SimplebarAngularModule } from 'simplebar-angular/lib/simplebar-angular.module';
+import { DeleteWarningComponent } from './components/delete-warning/delete-warning.component';
+import { CrudUpdateFormComponent } from './pages/crud-update-form/crud-update-form.component';
+import { UpdateComponent } from './components/update/update.component';
 //import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
@@ -57,6 +60,9 @@ import { DeleteProductComponent } from './components/delete-product/delete-produ
     CrudUpdateComponent,
     CrudDeleteComponent,
     DeleteProductComponent,
+    DeleteWarningComponent,
+    CrudUpdateFormComponent,
+    UpdateComponent,
     //HomePageComponent,
   ],
   imports: [
