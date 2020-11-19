@@ -14,27 +14,9 @@ export class DeleteWarningComponent implements OnInit {
 
   controlWarningModalService = ControlWarningModalService;
 
-  products: Array<Product> = [];
-
-  constructor(private productService: ProductsService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.getAllProducts();
   }
 
-  getAllProducts(): void {
-    this.productService.getAllProducts().subscribe((items) => {
-      this.products = items.map(
-        (item) =>
-          ({
-            ...item.payload.doc.data(),
-            $key: item.payload.doc.id,
-          } as Product)
-      )
-    });
-  }
-
-  deleteProduct(productId): void{
-    this.productService.deleteProduct(productId).then(res =>{}).catch(err=>console.log(err));
-  }
 }

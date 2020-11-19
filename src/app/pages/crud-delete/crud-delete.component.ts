@@ -48,5 +48,4 @@ export class CrudDeleteComponent implements OnInit {
   click(event) {
     this.onClick.emit(true);
   }
-
 }
