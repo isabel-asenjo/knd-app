@@ -15,11 +15,11 @@ const routes: Routes = [
   //  { path: 'about', component: AboutUsComponent },
   { path: 'admin', component: AdminMainPageComponent },
   { path: 'admin-cruds', component: AdminCrudsComponent },
-  { path: 'admin-cruds/create', component: CrudCreateComponent },
-  { path: 'admin-cruds/read', component: CrudReadComponent },
-  { path: 'admin-cruds/update', component: CrudUpdateComponent },
-  { path: 'admin-cruds/delete', component: CrudDeleteComponent },
-  { path: 'admin-cruds/:productId/update', component: CrudUpdateFormComponent },
+  { path: 'admin-cruds/:crudType/create', component: CrudCreateComponent },
+  { path: 'admin-cruds/:crudType/read', component: CrudReadComponent },
+  { path: 'admin-cruds/:crudType/update', component: CrudUpdateComponent },
+  { path: 'admin-cruds/:crudType/delete', component: CrudDeleteComponent },
+  { path: 'admin-cruds/:crudType/:productId/update', component: CrudUpdateFormComponent },
 ];
 
 @NgModule({

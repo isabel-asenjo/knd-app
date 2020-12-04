@@ -23,7 +23,7 @@ export class DeleteProductComponent implements OnInit {
         (item) =>
           ({
             ...item.payload.doc.data(),
-            $key: item.payload.doc.id,
+            $key: item.payload.doc['id'],
           } as Product)
       )
     });

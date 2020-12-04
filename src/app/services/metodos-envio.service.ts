@@ -13,19 +13,19 @@ export class MetodosEnvioService {
     this.metodosEnvioCollection = this.db.collection<MetodoEnvio>('metodosEnvio');
   }
 
-  getAllMetodosPago(): Observable<DocumentChangeAction<MetodoEnvio>[]>{
+  getAllMetodosEnvio(): Observable<DocumentChangeAction<MetodoEnvio>[]>{
     return this.metodosEnvioCollection.snapshotChanges();
   }
   
-  createProduct(newMetodoEnvio: MetodoEnvio): Promise<any> {
+  createMetodoEnvio(newMetodoEnvio: MetodoEnvio): Promise<any> {
     return this.metodosEnvioCollection.add(newMetodoEnvio);
   }
 
-  updateProduct(data: MetodoEnvio, docId: string): Promise<void> {
+  updateMetodoEnvio(data: MetodoEnvio, docId: string): Promise<void> {
     return this.metodosEnvioCollection.doc<MetodoEnvio>(docId).update(data);
   }
 
-  deleteProduct(docId: string): Promise<void>{
+  deleteMetodoEnvio(docId: string): Promise<void>{
     return this.metodosEnvioCollection.doc<MetodoEnvio>(docId).delete();
   }
 }

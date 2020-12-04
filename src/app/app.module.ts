@@ -77,7 +77,7 @@ import { UpdateComponent } from './components/update/update.component';
     AngularFirestoreModule,
     AngularFireAuthModule,
   ],
-  providers: [],
+  providers: [AdminMainPageComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

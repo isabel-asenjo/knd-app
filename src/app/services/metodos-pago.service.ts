@@ -17,15 +17,15 @@ export class MetodosPagoService {
     return this.metodosPagoCollection.snapshotChanges();
   }
   
-  createProduct(newMetodoPago: MetodoPago): Promise<any> {
+  createMetodoPago(newMetodoPago: MetodoPago): Promise<any> {
     return this.metodosPagoCollection.add(newMetodoPago);
   }
 
-  updateProduct(data: MetodoPago, docId: string): Promise<void> {
+  updateMetodoPago(data: MetodoPago, docId: string): Promise<void> {
     return this.metodosPagoCollection.doc<MetodoPago>(docId).update(data);
   }
 
-  deleteProduct(docId: string): Promise<void>{
+  deleteMetodoPago(docId: string): Promise<void>{
     return this.metodosPagoCollection.doc<MetodoPago>(docId).delete();
   }
 }

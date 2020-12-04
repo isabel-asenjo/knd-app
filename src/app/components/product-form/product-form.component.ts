@@ -31,7 +31,7 @@ export class ProductFormComponent implements OnInit {
         this.productService.getProduct(this.productId).subscribe(item =>{
           this.editProduct = {
             ...item.payload.data(),
-            $key: item.payload.id,
+            $key: item.payload["id"],
           };
       
           this.productForm.patchValue({
@@ -70,15 +70,31 @@ export class ProductFormComponent implements OnInit {
   }
   
   onSubmit():void{
-    const newProduct: Product = {
+    const dataProduct: Product = {
       name: this.productForm.get('name').value,
       description: this.productForm.get('description').value,
       price: this.productForm.get('price').value,
       category: this.productForm.get('category').value,
     }
 
-    this.createProduct(newProduct);
+    if (dataProduct.price > 0){
+      if (this.editProduct) {
+        this.updateProduct(dataProduct);
+        return;
+      }
+  
+      this.createProduct(dataProduct);
+    }
+
+    // poner un else que lance error
+    
   }
 
+
+  updateProduct(data: Product): void {
+    this.productService.updateProduct(data, this.productId).then((res) => {
+      this.router.navigate(['/admin-cruds/read']);
+    });
+  }
   
 }

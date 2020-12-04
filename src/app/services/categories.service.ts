@@ -13,19 +13,19 @@ export class CategoriesService {
     this.categoriesCollection = this.db.collection<Category>('categories');
   }
 
-  getAllProducts(): Observable<DocumentChangeAction<Category>[]>{
+  getAllCategories(): Observable<DocumentChangeAction<Category>[]>{
     return this.categoriesCollection.snapshotChanges();
   }
   
-  createProduct(newCategory: Category): Promise<any> {
+  createCategory(newCategory: Category): Promise<any> {
     return this.categoriesCollection.add(newCategory);
   }
 
-  updateProduct(data: Category, docId: string): Promise<void> {
+  updateCategory(data: Category, docId: string): Promise<void> {
     return this.categoriesCollection.doc<Category>(docId).update(data);
   }
 
-  deleteProduct(docId: string): Promise<void>{
+  deleteCategory(docId: string): Promise<void>{
     return this.categoriesCollection.doc<Category>(docId).delete();
   }
 }
