@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 //import { HomePageComponent } from './pages/home-page/home-page.component';
-//import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { AdminMainPageComponent } from './pages/admin-main-page/admin-main-page.component';
 import { AdminCrudsComponent } from './pages/admin-cruds/admin-cruds.component';
 import { CrudReadComponent } from './pages/crud-read/crud-read.component';
@@ -12,7 +12,7 @@ import { CrudUpdateFormComponent } from './pages/crud-update-form/crud-update-fo
 
 const routes: Routes = [
   //{ path: '', component: HomePageComponent },
-  //  { path: 'about', component: AboutUsComponent },
+  { path: 'about', component: AboutPageComponent },
   { path: 'admin', component: AdminMainPageComponent },
   { path: 'admin-cruds', component: AdminCrudsComponent },
   { path: 'admin-cruds/:crudType/create', component: CrudCreateComponent },

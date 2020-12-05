@@ -42,6 +42,7 @@ import { DeleteProductComponent } from './components/delete-product/delete-produ
 import { DeleteWarningComponent } from './components/delete-warning/delete-warning.component';
 import { CrudUpdateFormComponent } from './pages/crud-update-form/crud-update-form.component';
 import { UpdateComponent } from './components/update/update.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
 //import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
@@ -63,6 +64,7 @@ import { UpdateComponent } from './components/update/update.component';
     DeleteWarningComponent,
     CrudUpdateFormComponent,
     UpdateComponent,
+    AboutPageComponent,
     //HomePageComponent,
   ],
   imports: [
