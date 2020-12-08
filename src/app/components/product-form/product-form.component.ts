@@ -86,7 +86,7 @@ export class ProductFormComponent implements OnInit {
       this.createProduct(dataProduct);
     }
 
-    // poner un else que lance error
+    alert("Ha ingresado algún dato inválido o ha dejado un campo vacío.");
     
   }
 
