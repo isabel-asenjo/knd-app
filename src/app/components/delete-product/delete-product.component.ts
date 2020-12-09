@@ -31,5 +31,6 @@ export class DeleteProductComponent implements OnInit {
 
   deleteProduct(productId): void{
     this.productService.deleteProduct(productId).then(res =>{}).catch(err=>console.log(err));
+    alert("Se ha eliminado el producto exitosamente.");
   }
 }

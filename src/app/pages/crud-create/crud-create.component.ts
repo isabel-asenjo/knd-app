@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router,NavigationEnd  } from '@angular/router';
+import { Router,NavigationEnd,ActivatedRoute  } from '@angular/router';
 import { AdminMainPageComponent } from 'src/app/pages/admin-main-page/admin-main-page.component';
 
 @Component({
@@ -10,13 +10,16 @@ import { AdminMainPageComponent } from 'src/app/pages/admin-main-page/admin-main
 export class CrudCreateComponent implements OnInit {
 
   crudT='';
+  currentRoute="";
 
-  constructor(private router: Router, private adminMainPageComponent: AdminMainPageComponent) { }
+  constructor(private router: Router, private adminMainPageComponent: AdminMainPageComponent, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.currentRoute = this.router.url;
     console.log(this.adminMainPageComponent.crudType);
     this.crudT = this.adminMainPageComponent.crudType;
     console.log(this.crudT);
+    console.log(this.router.url);
   }
 
 }

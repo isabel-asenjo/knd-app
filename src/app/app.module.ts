@@ -42,7 +42,9 @@ import { DeleteProductComponent } from './components/delete-product/delete-produ
 import { DeleteWarningComponent } from './components/delete-warning/delete-warning.component';
 import { CrudUpdateFormComponent } from './pages/crud-update-form/crud-update-form.component';
 import { UpdateComponent } from './components/update/update.component';
+import { ImageUploadComponent } from './components/image-upload/image-upload.component';
 //import { HomePageComponent } from './pages/home-page/home-page.component';
+import { ImageUploadService } from "./services/image-upload.service";
 
 @NgModule({
   declarations: [
@@ -63,6 +65,7 @@ import { UpdateComponent } from './components/update/update.component';
     DeleteWarningComponent,
     CrudUpdateFormComponent,
     UpdateComponent,
+    ImageUploadComponent,
     //HomePageComponent,
   ],
   imports: [
@@ -77,7 +80,7 @@ import { UpdateComponent } from './components/update/update.component';
     AngularFirestoreModule,
     AngularFireAuthModule,
   ],
-  providers: [AdminMainPageComponent],
+  providers: [AdminMainPageComponent,ImageUploadService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
