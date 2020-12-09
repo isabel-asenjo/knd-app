@@ -36,9 +36,37 @@ body {
 
 
 .crud-buttons{
-    width: 20%;
-    margin: 20px;
     height: 100%;
+    width: 25%;
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    ul{
+        list-style: none;
+        li{
+            margin: 5%;
+        }
+    }
+
+
+    .btn{
+        background-color: transparent;
+        border: none;
+        text-align: center;
+        height: 5vh;
+        width: 10vw;
+        color: black;
+        font-size: large;
+    }
+    .active{
+        background-color: $color-dark-turquoise;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.575);
+        color: white;
+    }
+
 }
 
 .crud-detail {
@@ -79,4 +107,88 @@ app-read {
     color: white;
     font-size: x-large;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.575);
+}
+
+
+@import 'src/app/styles/lib/variables';
+
+ul {
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+
+#purchase-records{
+    background-color: $color-transparent-white;
+    padding:  2%;
+    border-radius: 15px;
+    height: 200px;
+    overflow: hidden;
+
+    .purchase-record{
+        display: flex;
+        flex-direction: row;
+        padding: 5px 10px 5px 20px;
+        font-size: $fs-regular;
+
+        .purchase-id {
+            background-color: $color-dark-turquoise;
+            width: 15%;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            text-align: center;
+            font-size: large;
+        }
+
+        .purchase-info {
+            background-color: white;
+            width: 80%;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+
+            p{
+                padding-left: 2%;
+                color: black;
+            }
+        }
+    }
+
+    
+}
+
+
+
+.pr-container{
+    overflow-y: scroll;
+    border-radius: 15px;
+    height: 200px;
+    width: 98%;
+}
+
+.pr-container::-webkit-scrollbar{
+    width: 10px;
+    background:transparent;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.pr-container::-webkit-scrollbar-thumb{
+    background: #808080;
+    border-radius: 15px;
+}
+
+
+
+
+thead{
+    background-color: $color-lavander-rose;
+    font-size: large;
+}
+
+table{
+    th{
+        color: black;
+    }
 }

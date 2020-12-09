@@ -18,7 +18,7 @@
                             <th scope="row">{{ category.name }}</th>
                             <th scope="row">{{ category.description }}</th>
                             <th scope="row">{{ category.products }}</th>
-                            <a class="btn btn-primary" [routerLink]="['/admin-cruds', category.$key, 'update-category']" routerLinkActive="router-link-active"> Update item </a>
+                            <a class="btn btn-primary" [routerLink]="['/admin-cruds/category', category.$key, 'update']" routerLinkActive="router-link-active"> Update item </a>
                           </tr>
                         </tbody>
                       </table>

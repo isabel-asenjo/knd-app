@@ -18,7 +18,7 @@
                             <th scope="row">{{ metodoPago.name }}</th>
                             <th scope="row">{{ metodoPago.description }}</th>
                             <th scope="row">{{ metodoPago.adicional }}</th>
-                            <a class="btn btn-primary" [routerLink]="['/admin-cruds', metodoPago.$key, 'update-metodo-pago']" routerLinkActive="router-link-active"> Update item </a>
+                            <a class="btn btn-primary" [routerLink]="['/admin-cruds/metodo-pago', metodoPago.$key, 'update']" routerLinkActive="router-link-active"> Update item </a>
                           </tr>
                         </tbody>
                       </table>

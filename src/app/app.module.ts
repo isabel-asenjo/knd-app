@@ -67,6 +67,9 @@ import { MapComponent } from './components/map/map.component';
 //import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ImageUploadService } from "./services/image-upload.service";
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { CrudUpdateFormCategoryComponent } from './pages/crud-update-form-category/crud-update-form-category.component';
+import { CrudUpdateFormMetodoPagoComponent } from './pages/crud-update-form-metodo-pago/crud-update-form-metodo-pago.component';
+import { CrudUpdateFormMetodoEnvioComponent } from './pages/crud-update-form-metodo-envio/crud-update-form-metodo-envio.component';
 
 @NgModule({
   declarations: [
@@ -110,6 +113,9 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
     ContactPageComponent,
     MapComponent,
     LoginPageComponent,
+    CrudUpdateFormCategoryComponent,
+    CrudUpdateFormMetodoPagoComponent,
+    CrudUpdateFormMetodoEnvioComponent,
     //HomePageComponent,
   ],
   imports: [

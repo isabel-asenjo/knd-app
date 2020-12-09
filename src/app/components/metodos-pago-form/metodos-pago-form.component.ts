@@ -63,7 +63,7 @@ export class MetodosPagoFormComponent implements OnInit {
   
   createMetodoPago(newMetodoPago: MetodoPago): void{
     this.metodosPagoService.createMetodoPago(newMetodoPago).then(res =>{
-       this.router.navigate(['/admin-cruds/read-metodo-pago']);
+       this.router.navigate(['/admin-cruds/metodo-pago/read']);
     }).catch(err => console.log(err));
   }
   

@@ -63,7 +63,7 @@ export class MetodosEnvioFormComponent implements OnInit {
   
   createMetodoEnvio(newMetodoEnvio: MetodoEnvio): void{
     this.metodosEnvioService.createMetodoEnvio(newMetodoEnvio).then(res =>{
-       this.router.navigate(['/admin-cruds/read-metodo-envio']);
+       this.router.navigate(['/admin-cruds/metodo-envio/read']);
     }).catch(err => console.log(err));
   }
   

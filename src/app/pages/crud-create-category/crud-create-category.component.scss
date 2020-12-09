@@ -35,12 +35,6 @@ body {
 }
 
 
-.crud-buttons{
-    width: 20%;
-    margin: 20px;
-    height: 100%;
-}
-
 .crud-detail {
     width: 70vw;
     padding: 2%;
@@ -56,3 +50,36 @@ body {
     color: $color-gold;
 }
 
+.crud-buttons{
+    height: 100%;
+    width: 25%;
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    ul{
+        list-style: none;
+        li{
+            margin: 5%;
+        }
+    }
+
+
+    .btn{
+        background-color: transparent;
+        border: none;
+        text-align: center;
+        height: 5vh;
+        width: 10vw;
+        color: black;
+        font-size: large;
+    }
+    .active{
+        background-color: $color-dark-turquoise;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.575);
+        color: white;
+    }
+
+}
