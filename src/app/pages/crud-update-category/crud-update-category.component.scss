@@ -1,0 +1,57 @@
+@import 'src/app/styles/lib/variables';
+
+
+*{
+    font-family: $font-text;
+    color: white;
+    overflow: hidden;
+}
+body {
+    background-image: $color-bg-gradient;
+    height: 100vh;
+}
+
+.title{
+    text-align: center;
+    padding: 15vh;
+    padding-bottom: 5vh;
+    h1{
+        color: black;
+        font-family: $font-titles;
+    }
+}
+
+.breadcrumbs{
+    width: 100vw;
+    padding-left: 10%;
+}
+
+
+.crud-view {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40vh;
+}
+
+
+app-crud-buttons{
+    width: 20%;
+    margin: 20px;
+    height: 100%;
+}
+
+.crud-detail {
+    width: 70vw;
+    padding: 2%;
+}
+
+
+.breadcrumb {
+    background: transparent;
+    font-size: large;
+}
+
+.breadcrumb-item.active {
+    color: $color-gold;
+}

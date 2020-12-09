@@ -1,0 +1,60 @@
+<body>
+    <div class="title">
+        <h1>Gestión de la página:</h1>
+        <h1>metodos de pago</h1>
+    </div>
+
+    <div class='breadcrumbs'>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href='/admin'>GESTIÓN DE LA PÁGINA</a></li>
+                <li class="breadcrumb-item">CRUDS</li>
+                <li class="breadcrumb-item active" aria-current="page">ELIMINAR</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class='crud-view'>
+        <div class='crud-buttons'>
+            <button class='btn active' ng-click='changeBtnStyle()' [routerLink]="['/admin-cruds/create-metodo-pago']" routerLinkActive="router-link-active">CREAR</button>
+            <button class='btn active' ng-click='changeBtnStyle()' [routerLink]="['/admin-cruds/read-metodo-pago']" routerLinkActive="router-link-active" >VER</button>
+            <button class='btn active'[routerLink]="['/admin-cruds/update-metodo-pago']" routerLinkActive="router-link-active">MODIFICAR</button>
+            <button class='btn active' [routerLink]="['/admin-cruds/delete-metodo-pago']" routerLinkActive="router-link-active">ELIMINAR</button>
+        </div>
+
+        <div class='crud-detail'>
+            <div class='section-content' id='purchase-records'>
+                <div class='pr-container'>
+                    <ul>
+                        <li>
+                            <!--*ngFor="let record of records;-->
+                            <div>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"> # </th>
+                                            <th scope="col"> Name </th>
+                                            <th scope="col"> Description </th>
+                                            <th scope="col"> Additional info </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let metodoPago of metodosPago">
+                                            <th scope="row">{{ metodoPago.$key }}</th>
+                                            <th scope="row">{{ metodoPago.name }}</th>
+                                            <th scope="row">{{ metodoPago.description }}</th>
+                                            <th scope="row">{{ metodoPago.adicional }}</th>
+                                            <button class='btn btn-danger' (click)='deleteMetodoPago(metodoPago.$key)'> Delete
+                                                Billing Method </button>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<app-delete-warning *ngIf='display==true'></app-delete-warning>
