@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-//import { HomePageComponent } from './pages/home-page/home-page.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { AdminMainPageComponent } from './pages/admin-main-page/admin-main-page.component';
@@ -30,11 +30,14 @@ import { CrudDeleteMetodoPagoComponent } from './pages/crud-delete-metodo-pago/c
 import { CrudUpdateFormCategoryComponent } from './pages/crud-update-form-category/crud-update-form-category.component';
 import { CrudUpdateFormMetodoPagoComponent } from './pages/crud-update-form-metodo-pago/crud-update-form-metodo-pago.component';
 import { CrudUpdateFormMetodoEnvioComponent } from './pages/crud-update-form-metodo-envio/crud-update-form-metodo-envio.component';
+import { ShopPageComponent } from './pages/shop-page/shop-page.component';
+
 
 
 const routes: Routes = [
-  //{ path: '', component: HomePageComponent },
+  { path: '', component: HomePageComponent },
   { path: 'about', component: AboutPageComponent },
+  { path: 'shop', component: ShopPageComponent },
   { path: 'contact', component: ContactPageComponent },
   { path: 'admin', component: AdminMainPageComponent },
   { path: 'admin-cruds', component: AdminCrudsComponent },
@@ -58,6 +61,7 @@ const routes: Routes = [
   { path: 'admin-cruds/metodo-pago/update', component: CrudUpdateMetodoPagoComponent },
   { path: 'admin-cruds/metodo-pago/:metodoPagoId/update', component: CrudUpdateFormMetodoPagoComponent },
   { path: 'admin-cruds/metodo-pago/delete', component: CrudDeleteMetodoPagoComponent },
+
 ];
 
 @NgModule({

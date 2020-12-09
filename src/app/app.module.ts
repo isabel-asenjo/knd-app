@@ -64,11 +64,13 @@ import { CrudDeleteMetodoPagoComponent } from './pages/crud-delete-metodo-pago/c
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { MapComponent } from './components/map/map.component';
-//import { HomePageComponent } from './pages/home-page/home-page.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ImageUploadService } from "./services/image-upload.service";
 import { CrudUpdateFormCategoryComponent } from './pages/crud-update-form-category/crud-update-form-category.component';
 import { CrudUpdateFormMetodoPagoComponent } from './pages/crud-update-form-metodo-pago/crud-update-form-metodo-pago.component';
 import { CrudUpdateFormMetodoEnvioComponent } from './pages/crud-update-form-metodo-envio/crud-update-form-metodo-envio.component';
+import { ShopPageComponent } from './pages/shop-page/shop-page.component';
+
 
 @NgModule({
   declarations: [
@@ -76,6 +78,7 @@ import { CrudUpdateFormMetodoEnvioComponent } from './pages/crud-update-form-met
     NavbarComponent,
     NavigationComponent,
     FooterComponent,
+    HomePageComponent,
     AdminMainPageComponent,
     ProductFormComponent,
     AdminCrudsComponent,
@@ -114,7 +117,7 @@ import { CrudUpdateFormMetodoEnvioComponent } from './pages/crud-update-form-met
     CrudUpdateFormCategoryComponent,
     CrudUpdateFormMetodoPagoComponent,
     CrudUpdateFormMetodoEnvioComponent,
-    //HomePageComponent,
+    ShopPageComponent,
   ],
   imports: [
     BrowserModule,
