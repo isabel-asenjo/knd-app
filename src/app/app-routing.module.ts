@@ -27,6 +27,7 @@ import { CrudUpdateMetodoPagoComponent } from './pages/crud-update-metodo-pago/c
 import { MetodosPagoFormComponent } from './components/metodos-pago-form/metodos-pago-form.component'
 import { MetodosPagoService } from './services/metodos-pago.service';
 import { CrudDeleteMetodoPagoComponent } from './pages/crud-delete-metodo-pago/crud-delete-metodo-pago.component'
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { CrudUpdateFormCategoryComponent } from './pages/crud-update-form-category/crud-update-form-category.component';
 import { CrudUpdateFormMetodoPagoComponent } from './pages/crud-update-form-metodo-pago/crud-update-form-metodo-pago.component';
 import { CrudUpdateFormMetodoEnvioComponent } from './pages/crud-update-form-metodo-envio/crud-update-form-metodo-envio.component';
@@ -39,6 +40,7 @@ const routes: Routes = [
   { path: 'about', component: AboutPageComponent },
   { path: 'shop', component: ShopPageComponent },
   { path: 'contact', component: ContactPageComponent },
+  { path: 'login', component: LoginPageComponent },
   { path: 'admin', component: AdminMainPageComponent },
   { path: 'admin-cruds', component: AdminCrudsComponent },
   { path: 'admin-cruds/product/create', component: CrudCreateComponent },
