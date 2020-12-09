@@ -32,7 +32,7 @@ export class MetodosEnvioFormComponent implements OnInit {
         this.metodosEnvioService.getMetodoEnvio(this.metodoEnvioId).subscribe(item =>{
           this.editMetodoEnvio = {
             ...item.payload.data(),
-            $key: item.payload.id,
+            $key: item.payload['id'],
           };
       
           this.metodoEnvioForm.patchValue({

@@ -32,7 +32,7 @@ export class MetodosPagoFormComponent implements OnInit {
         this.metodosPagoService.getMetodoPago(this.metodoPagoId).subscribe(item =>{
           this.editMetodoPago = {
             ...item.payload.data(),
-            $key: item.payload.id,
+            $key: item.payload['id'],
           };
       
           this.metodoPagoForm.patchValue({

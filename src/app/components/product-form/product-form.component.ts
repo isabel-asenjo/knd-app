@@ -22,6 +22,7 @@ export class ProductFormComponent implements OnInit {
   productId: string;
   uploadPercent: Observable<number>;
   urlImage: Observable<string>;
+  image: '';
   
 
   ngOnInit(): void {
@@ -83,7 +84,7 @@ export class ProductFormComponent implements OnInit {
       description: this.productForm.get('description').value,
       price: this.productForm.get('price').value,
       category: this.productForm.get('category').value,
-      image: this.urlImage,
+      imageUrl: this.image,
 
     }
 

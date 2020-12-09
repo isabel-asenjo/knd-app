@@ -23,7 +23,7 @@ export class UpdateMetodoPagoComponent implements OnInit {
         (item) =>
           ({
             ...item.payload.doc.data(),
-            $key: item.payload.doc.id,
+            $key: item.payload.doc['id'],
           } as MetodoPago)
       )
     });

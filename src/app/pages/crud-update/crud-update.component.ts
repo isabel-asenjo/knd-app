@@ -34,7 +34,7 @@ export class CrudUpdateComponent implements OnInit {
     this.productService.getProduct(docId).subscribe(item => {
       this.product = {
         ...item.payload.data(),
-        $key: item.payload.id,
+        $key: item.payload['id'],
       }
     })
   }
@@ -45,7 +45,7 @@ export class CrudUpdateComponent implements OnInit {
         (item) =>
           ({
             ...item.payload.doc.data(),
-            $key: item.payload.doc.id,
+            $key: item.payload.doc['id'],
           } as Product)
       )
     });

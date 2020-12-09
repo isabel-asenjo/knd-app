@@ -31,7 +31,7 @@ export class CategoryFormComponent implements OnInit {
         this.categoriesService.getCategory(this.categoryId).subscribe(item =>{
           this.editCategory = {
             ...item.payload.data(),
-            $key: item.payload.id,
+            $key: item.payload['id'],
           };
       
           this.categoryForm.patchValue({
