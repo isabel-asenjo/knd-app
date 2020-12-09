@@ -48,6 +48,18 @@ import { CrudUpdateCategoryComponent } from './pages/crud-update-category/crud-u
 import { UpdateCategoryComponent } from './components/update-category/update-category.component';
 import { CrudReadCategoryComponent } from './pages/crud-read-category/crud-read-category.component';
 import { CrudDeleteCategoryComponent } from './pages/crud-delete-category/crud-delete-category.component';
+import { MetodosEnvioFormComponent } from './components/metodos-envio-form/metodos-envio-form.component';
+import { CrudCreateMetodoEnvioComponent } from './pages/crud-create-metodo-envio/crud-create-metodo-envio.component';
+import { CrudReadMetodoEnvioComponent } from './pages/crud-read-metodo-envio/crud-read-metodo-envio.component';
+import { CrudUpdateMetodoEnvioComponent } from './pages/crud-update-metodo-envio/crud-update-metodo-envio.component';
+import { UpdateMetodoEnvioComponent } from './components/update-metodo-envio/update-metodo-envio.component';
+import { CrudDeleteMetodoEnvioComponent } from './pages/crud-delete-metodo-envio/crud-delete-metodo-envio.component';
+import { MetodosPagoFormComponent } from './components/metodos-pago-form/metodos-pago-form.component';
+import { CrudCreateMetodoPagoComponent } from './pages/crud-create-metodo-pago/crud-create-metodo-pago.component';
+import { CrudReadMetodoPagoComponent } from './pages/crud-read-metodo-pago/crud-read-metodo-pago.component';
+import { CrudUpdateMetodoPagoComponent } from './pages/crud-update-metodo-pago/crud-update-metodo-pago.component';
+import { UpdateMetodoPagoComponent } from './components/update-metodo-pago/update-metodo-pago.component';
+import { CrudDeleteMetodoPagoComponent } from './pages/crud-delete-metodo-pago/crud-delete-metodo-pago.component';
 //import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
@@ -75,6 +87,18 @@ import { CrudDeleteCategoryComponent } from './pages/crud-delete-category/crud-d
     UpdateCategoryComponent,
     CrudReadCategoryComponent,
     CrudDeleteCategoryComponent,
+    MetodosEnvioFormComponent,
+    CrudCreateMetodoEnvioComponent,
+    CrudReadMetodoEnvioComponent,
+    CrudUpdateMetodoEnvioComponent,
+    UpdateMetodoEnvioComponent,
+    CrudDeleteMetodoEnvioComponent,
+    MetodosPagoFormComponent,
+    CrudCreateMetodoPagoComponent,
+    CrudReadMetodoPagoComponent,
+    CrudUpdateMetodoPagoComponent,
+    UpdateMetodoPagoComponent,
+    CrudDeleteMetodoPagoComponent,
     //HomePageComponent,
   ],
   imports: [

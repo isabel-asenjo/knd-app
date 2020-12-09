@@ -17,6 +17,10 @@ export class MetodosEnvioService {
     return this.metodosEnvioCollection.snapshotChanges();
   }
   
+  getMetodoEnvio(metodoEnvioId: string): Observable<Action<DocumentSnapshot<MetodoEnvio>>>{
+    return this.metodosEnvioCollection.doc<MetodoEnvio>(metodoEnvioId).snapshotChanges();
+  }
+
   createMetodoEnvio(newMetodoEnvio: MetodoEnvio): Promise<any> {
     return this.metodosEnvioCollection.add(newMetodoEnvio);
   }
