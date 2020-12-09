@@ -7,15 +7,17 @@
         <li><a href="/contact">CONTÁCTANOS</a></li>
         <li *ngIf="isAuthenticated"><a href="/admin">ADMIN</a></li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i id="userCircle" class="fas fa-user-circle fa-1.5x"></i> <!--(click)="openOCMenu()"-->
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{ user.displayName }}
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <button class="dropdown-item" (click)="loginWithGoogle()"> Login with Google </button>
-              <div class="dropdown-divider"></div>
-              <button class="dropdown-item" (click)="logout()">Logout</button>
-            </div>
-          </li>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <button class="dropdown-item" (click)="loginWithGoogle()"> Login with Google </button>
+            <div class="dropdown-divider"></div>
+            <button class="dropdown-item" (click)="logout()">Logout</button>
+          </div>
+          
+        </li>
     </ul>
-    <i id="userCircle" class="fas fa-user-circle fa-2x"></i> <!--(click)="openOCMenu()"-->
+    
 </nav>      

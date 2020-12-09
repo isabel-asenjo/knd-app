@@ -30,7 +30,7 @@
         align-items: center;
 
         li{
-            font-size: $fs-regular+10px;
+            font-size: $fs-regular;
             display: flex;
             height: 100%;
             list-style-type: none;
@@ -53,6 +53,14 @@
 
 #logoNavbar{
     height: 50px;
+}
+
+
+.nav-item{
+  align-items: center;
+}
+#userCircle{
+  padding: 0 0.5rem 0 0;
 }
 
 
