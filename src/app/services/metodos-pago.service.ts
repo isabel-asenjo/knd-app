@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection, DocumentChangeAction } from '@angular/fire/firestore';
+import { Action, AngularFirestore, AngularFirestoreCollection, DocumentChangeAction, DocumentSnapshot } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { MetodoPago } from '../models/metodo-pago';
 
@@ -17,15 +17,15 @@ export class MetodosPagoService {
     return this.metodosPagoCollection.snapshotChanges();
   }
   
-  createProduct(newMetodoPago: MetodoPago): Promise<any> {
+  createMetodoPago(newMetodoPago: MetodoPago): Promise<any> {
     return this.metodosPagoCollection.add(newMetodoPago);
   }
 
-  updateProduct(data: MetodoPago, docId: string): Promise<void> {
+  updateMetodoPago(data: MetodoPago, docId: string): Promise<void> {
     return this.metodosPagoCollection.doc<MetodoPago>(docId).update(data);
   }
 
-  deleteProduct(docId: string): Promise<void>{
+  deleteMetodoPago(docId: string): Promise<void>{
     return this.metodosPagoCollection.doc<MetodoPago>(docId).delete();
   }
 }

@@ -42,6 +42,12 @@ import { DeleteProductComponent } from './components/delete-product/delete-produ
 import { DeleteWarningComponent } from './components/delete-warning/delete-warning.component';
 import { CrudUpdateFormComponent } from './pages/crud-update-form/crud-update-form.component';
 import { UpdateComponent } from './components/update/update.component';
+import { CategoryFormComponent } from './components/category-form/category-form.component';
+import { CrudCreateCategoryComponent } from './pages/crud-create-category/crud-create-category.component';
+import { CrudUpdateCategoryComponent } from './pages/crud-update-category/crud-update-category.component';
+import { UpdateCategoryComponent } from './components/update-category/update-category.component';
+import { CrudReadCategoryComponent } from './pages/crud-read-category/crud-read-category.component';
+import { CrudDeleteCategoryComponent } from './pages/crud-delete-category/crud-delete-category.component';
 //import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
@@ -63,6 +69,12 @@ import { UpdateComponent } from './components/update/update.component';
     DeleteWarningComponent,
     CrudUpdateFormComponent,
     UpdateComponent,
+    CategoryFormComponent,
+    CrudCreateCategoryComponent,
+    CrudUpdateCategoryComponent,
+    UpdateCategoryComponent,
+    CrudReadCategoryComponent,
+    CrudDeleteCategoryComponent,
     //HomePageComponent,
   ],
   imports: [
