@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { ProductsService } from 'src/app/services/products.service';
-import { AdminMainPageComponent } from 'src/app/pages/admin-main-page/admin-main-page.component';
 
 @Component({
   selector: 'app-update',
@@ -11,15 +10,11 @@ import { AdminMainPageComponent } from 'src/app/pages/admin-main-page/admin-main
 export class UpdateComponent implements OnInit {
 
   products: Array<Product> = [];
-  crudT='';
 
-  constructor(private productService: ProductsService,private adminMainPageComponent: AdminMainPageComponent) { }
+  constructor(private productService: ProductsService) { }
 
   ngOnInit(): void {
     this.getAllProducts();
-    console.log(this.adminMainPageComponent.crudType);
-    this.crudT = this.adminMainPageComponent.crudType;
-    console.log(this.crudT);
   }
 
   getAllProducts(): void {
@@ -28,7 +23,7 @@ export class UpdateComponent implements OnInit {
         (item) =>
           ({
             ...item.payload.doc.data(),
-            $key: item.payload.doc["id"],
+            $key: item.payload.doc.id,
           } as Product)
       )
     });

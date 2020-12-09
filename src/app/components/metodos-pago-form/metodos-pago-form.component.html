@@ -1,0 +1,26 @@
+<form [formGroup]="metodoPagoForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="exampleInputEmail1"> Name </label>
+        <input type="text" 
+        class="form-control"
+        formControlName="name"
+        placeholder="Enter billing method name">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1"> Description </label>
+        <input 
+        type="text" 
+        class="form-control" 
+        formControlName="description"
+        placeholder="Enter billing method description">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1"> Adicional </label>
+        <input 
+        type="text" 
+        class="form-control" 
+        formControlName="adicional"
+        placeholder="Enter additional information">
+    </div>
+    <button type="submit" class="btn btn-primary"> Submit </button>
+</form>

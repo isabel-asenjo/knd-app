@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "knd-app"
+  "defaultProject": "knd-app",
+  "cli": {
+    "analytics": false
+  }
 }

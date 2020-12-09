@@ -16,8 +16,8 @@ export class CrudCreateComponent implements OnInit {
 
   ngOnInit(): void {
     this.currentRoute = this.router.url;
-    console.log(this.adminMainPageComponent.crudType);
-    this.crudT = this.adminMainPageComponent.crudType;
+    //console.log(this.adminMainPageComponent.crudType);
+    //this.crudT = this.adminMainPageComponent.crudType;
     console.log(this.crudT);
     console.log(this.router.url);
   }

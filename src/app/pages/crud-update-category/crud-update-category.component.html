@@ -1,0 +1,37 @@
+<body>
+    <div class="title">
+        <h1>Gestión de la página:</h1>
+        <h1>categorías</h1>
+    </div>
+
+    <div class='breadcrumbs'>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href='/admin'>GESTIÓN DE LA PÁGINA</a></li>
+              <li class="breadcrumb-item">CRUDS</li>
+              <li class="breadcrumb-item active" aria-current="page">MODIFICAR</li>
+            </ol>
+          </nav>
+    </div>
+
+    <div class='crud-view'>
+        <div class='crud-buttons'>
+            <button class='btn active' ng-click='changeBtnStyle()' [routerLink]="['/admin-cruds/create-category']" routerLinkActive="router-link-active">CREAR</button>
+            <button class='btn active' ng-click='changeBtnStyle()' [routerLink]="['/admin-cruds/read-category']" routerLinkActive="router-link-active" >VER</button>
+            <button class='btn active'[routerLink]="['/admin-cruds/update-category']" routerLinkActive="router-link-active">MODIFICAR</button>
+            <button class='btn active' [routerLink]="['/admin-cruds/delete-category']" routerLinkActive="router-link-active">ELIMINAR</button>
+        </div>
+
+        <div class='crud-detail'>
+            <div class='section-content' id='purchase-records'>
+                <div class='pr-container'>
+                    <br>
+                    <ul>
+                        <app-update-category></app-update-category>
+                    </ul>
+                    <br>
+                </div>
+            </div>    
+        </div>
+    </div>
+</body>

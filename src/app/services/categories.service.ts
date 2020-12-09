@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection, DocumentChangeAction } from '@angular/fire/firestore';
+import { Action, AngularFirestore, AngularFirestoreCollection, DocumentChangeAction, DocumentSnapshot } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Category } from '../models/category';
 
@@ -17,6 +17,10 @@ export class CategoriesService {
     return this.categoriesCollection.snapshotChanges();
   }
   
+  getCategory(categoryId: string): Observable<Action<DocumentSnapshot<Category>>>{
+    return this.categoriesCollection.doc<Category>(categoryId).snapshotChanges();
+  }
+
   createCategory(newCategory: Category): Promise<any> {
     return this.categoriesCollection.add(newCategory);
   }

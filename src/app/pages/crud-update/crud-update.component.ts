@@ -4,8 +4,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Product } from 'src/app/models/product';
 import { ProductsService } from 'src/app/services/products.service';
-import { Router,NavigationEnd  } from '@angular/router';
-import { AdminMainPageComponent } from 'src/app/pages/admin-main-page/admin-main-page.component';
 
 @Component({
   selector: 'app-crud-update',
@@ -16,10 +14,9 @@ export class CrudUpdateComponent implements OnInit {
 
   products: Array<Product> = [];
   docId: string;
-  crudT='';
 
   product: Product = null;
-  constructor(private productService: ProductsService, private route: ActivatedRoute, private adminMainPageComponent: AdminMainPageComponent) { 
+  constructor(private productService: ProductsService, private route: ActivatedRoute) { 
     this.route.paramMap.subscribe(params => {
       this.docId = params.get('productId');
 
@@ -31,16 +28,13 @@ export class CrudUpdateComponent implements OnInit {
   
   ngOnInit(): void {
     this.getAllProducts();
-    console.log(this.adminMainPageComponent.crudType);
-    this.crudT = this.adminMainPageComponent.crudType;
-    console.log(this.crudT);
   }
   
   getProduct(docId: string){
     this.productService.getProduct(docId).subscribe(item => {
       this.product = {
         ...item.payload.data(),
-        $key: item.payload["id"],
+        $key: item.payload.id,
       }
     })
   }
@@ -51,7 +45,7 @@ export class CrudUpdateComponent implements OnInit {
         (item) =>
           ({
             ...item.payload.doc.data(),
-            $key: item.payload.doc["id"],
+            $key: item.payload.doc.id,
           } as Product)
       )
     });

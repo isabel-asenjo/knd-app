@@ -1,0 +1,29 @@
+<div class='section-content' id='purchase-records'>
+    <div class='pr-container'>
+        <ul>
+            <li> <!--*ngFor="let record of records;-->
+                <div>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col"> # </th>
+                            <th scope="col"> Name </th>
+                            <th scope="col"> Description </th>
+                            <th scope="col"> Products </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let category of categories">
+                            <th scope="row">{{ category.$key }}</th>
+                            <th scope="row">{{ category.name }}</th>
+                            <th scope="row">{{ category.description }}</th>
+                            <th scope="row">{{ category.products }}</th>
+                            <a class="btn btn-primary" [routerLink]="['/admin-cruds', category.$key, 'update-category']" routerLinkActive="router-link-active"> Update item </a>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
