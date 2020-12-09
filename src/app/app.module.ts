@@ -62,6 +62,8 @@ import { CrudUpdateMetodoPagoComponent } from './pages/crud-update-metodo-pago/c
 import { UpdateMetodoPagoComponent } from './components/update-metodo-pago/update-metodo-pago.component';
 import { CrudDeleteMetodoPagoComponent } from './pages/crud-delete-metodo-pago/crud-delete-metodo-pago.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { MapComponent } from './components/map/map.component';
 //import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ImageUploadService } from "./services/image-upload.service";
 
@@ -104,6 +106,8 @@ import { ImageUploadService } from "./services/image-upload.service";
     UpdateMetodoPagoComponent,
     CrudDeleteMetodoPagoComponent,
     AboutPageComponent,
+    ContactPageComponent,
+    MapComponent,
     //HomePageComponent,
   ],
   imports: [

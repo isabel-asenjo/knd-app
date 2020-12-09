@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 //import { HomePageComponent } from './pages/home-page/home-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { AdminMainPageComponent } from './pages/admin-main-page/admin-main-page.component';
 import { AdminCrudsComponent } from './pages/admin-cruds/admin-cruds.component';
 import { CrudReadComponent } from './pages/crud-read/crud-read.component';
@@ -30,6 +31,7 @@ import { CrudDeleteMetodoPagoComponent } from './pages/crud-delete-metodo-pago/c
 const routes: Routes = [
   //{ path: '', component: HomePageComponent },
   { path: 'about', component: AboutPageComponent },
+  { path: 'contact', component: ContactPageComponent },
   { path: 'admin', component: AdminMainPageComponent },
   { path: 'admin-cruds', component: AdminCrudsComponent },
   { path: 'admin-cruds/create', component: CrudCreateComponent },
