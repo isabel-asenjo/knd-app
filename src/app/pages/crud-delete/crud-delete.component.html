@@ -1,0 +1,76 @@
+
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-footer">
+            
+        </div>
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">¡ADVERTENCIA!</h4>
+          <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+          <button type="button" class="btn btn-danger" data-dismiss="modal">X</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            ¿seguro que quiere eliminar “nombre”? una vez que lo haga no puede restaurar la información
+        </div>
+        <div class='decision-btns'>
+            <button type="button" class="btn canc" data-dismiss="modal">CANCELAR</button>
+            <button type="button" class="btn conf" data-dismiss="modal">CONFIRMAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<body>
+    <div class="title">
+        <h1>Gestión de la página:</h1>
+        <h1>productos</h1>
+    </div>
+
+    <div class='breadcrumbs'>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href='/admin'>GESTIÓN DE LA PÁGINA</a></li>
+              <li class="breadcrumb-item">CRUDS</li>
+              <li class="breadcrumb-item active" aria-current="page">ELIMINAR</li>
+            </ol>
+          </nav>
+    </div>
+
+    <div class='crud-view'>
+        <app-crud-buttons></app-crud-buttons>
+
+        <div class='crud-detail'>
+            <app-delete-product></app-delete-product>
+            <!-- div class='section-content' id='purchase-records'>
+                <div class='pr-container'>
+                    <ul>
+                        <li> *ngFor="let record of records;
+                            <div class='purchase-record'>
+                                <div class='purchase-id' type="button" data-toggle="modal" data-target="#myModal">ELIMINAR</div> AGREGAR (CLICK)=ELIMINAR() PARA ACTIVAR DELETE WARNING
+                                <div class='purchase-info'>
+                                    <p>blablabla</p>
+                                    <datos del beta
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div> -->
+                 
+        </div>
+    </div>
+</body>
+<app-delete-warning *ngIf='display==true'></app-delete-warning>
+
+
+
+
+

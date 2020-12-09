@@ -1,0 +1,32 @@
+<body>
+    <div class="title">
+        <h1>Gestión de la página:</h1>
+        <h1>productos</h1>
+    </div>
+
+    <div class='breadcrumbs'>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href='/admin'>GESTIÓN DE LA PÁGINA</a></li>
+              <li class="breadcrumb-item">CRUDS</li>
+              <li class="breadcrumb-item active" aria-current="page">CREAR</li>
+            </ol>
+          </nav>
+    </div>
+
+    <div class='crud-view'>
+        <app-crud-buttons></app-crud-buttons>
+
+        <div class='crud-detail'>
+            <div class='section-content' id='purchase-records'>
+                <div class='pr-container'>
+                    <br>
+                    <ul>
+                        <app-product-form *ngIf="currentRoute == '/admin-cruds/productos/create'"></app-product-form>
+                    </ul>
+                    <br>
+                </div>
+            </div>    
+        </div>
+    </div>
+</body>

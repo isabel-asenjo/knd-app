@@ -1,0 +1,178 @@
+@import 'src/app/styles/lib/variables';
+
+body {
+    background-image: $color-bg-gradient;
+    font-family: $font-text;
+    
+
+    h2{
+        font-family: $font-titles;
+    }
+
+    
+
+    p{
+        padding-top: 2vh;
+        font-size: 3vh;
+    }
+}
+
+
+header{
+    img{
+        width: 100%;
+    }
+}
+
+
+.top-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10vh;
+}
+
+
+
+.locations{
+    list-style-type: none;
+}
+
+
+
+
+
+
+
+
+
+#buttonContact{
+    background-color: $color-gold;
+    border: none;
+    color: white;
+    padding: 1px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 25px;
+}
+
+
+#buttonContact:hover{
+    background-color: #333333;
+    cursor: pointer;
+}
+
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.formulario div{
+    padding: 5px;
+}
+
+.fields{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.git-cards{
+
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+
+    .git-card{
+    
+        text-align: center;
+    
+        .git-card-y{
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+            background-color: $color-gold;
+            color: white;
+            border-radius: 0.8rem 0.8rem 0 0;
+        }
+        
+        .git-card-w{
+            background-color: $color-transparent-white;
+            border-radius: 0 0 0.8rem 0.8rem;
+            padding: 0.5rem;
+
+            p{
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+    
+
+}
+
+
+#socials{
+    
+    .git-card-w{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+        a{
+            color: black;
+        }
+    
+        a:hover{
+            cursor: pointer;
+            color: $color-free-speech-magenta;
+            text-decoration: none;
+        }
+    }
+
+    
+}
+
+
+#contact{
+    padding: 5rem;
+    
+    .form{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .contact-form-b{
+            background-color: $color-dark-turquoise;
+            color: white;
+            padding: 2rem 1rem 2rem 1rem;
+            border-radius: 1rem 0 0 1rem;
+        }
+
+        .contact-form-w{
+            width: 60vw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            background-color: $color-transparent-white;
+            padding: 2rem 1rem 2rem 1rem;
+            border-radius: 0 1rem 1rem 0;
+            .fields{
+                display: flex;
+                flex-direction: row;
+
+                div{
+                    padding: 0.5rem;
+                }
+            }
+        }
+
+        
+    }
+    
+}

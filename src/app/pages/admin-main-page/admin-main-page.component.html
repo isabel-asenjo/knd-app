@@ -1,0 +1,167 @@
+<body>
+    <div class="title">
+        <h1>Gestión de la página</h1>
+    </div>
+
+    <div class='sections'>
+        <div class='section-container'>
+            <div class='section-title'>
+                <h2>CRUDS</h2>
+            </div>
+            <div class='section-content' id='cruds'>
+                <!--aquí podría ir un *ngFor para que queden como los cuadritos y tal-->
+
+                <div>
+                    <div class='crud-options' id='categorias' [routerLink]="['/admin-cruds/create-category']" routerLinkActive="router-link-active">
+                        <i class="fas fa-th-list fa-3x"></i>
+                        <p>CATEGORíAS</p>
+                    </div>
+                    <div class='crud-options' id='categorias' [routerLink]="['/admin-cruds/create-metodo-envio']" routerLinkActive="router-link-active">
+                        <i class="fas fa-shopping-bag fa-3x"></i>
+                        <p>MÉTODOS DE RETIRO DE PEDIDOS</p>
+                    </div>
+                </div>
+                <div>
+                    <div class='crud-options' id='categorias' [routerLink]="['/admin-cruds/create']" routerLinkActive="router-link-active" >
+                        <i class="fas fa-candy-cane fa-3x"></i>
+                        <p>PRODUCTOS</p>
+                    </div>
+                    <div class='crud-options' id='categorias' [routerLink]="['/admin-cruds/create-metodo-pago']" routerLinkActive="router-link-active">
+                        <i class="fas fa-money-check-alt fa-3x"></i>
+                        <p>MÉTODOS DE PAGO</p>
+                    </div>
+                </div>
+                <!--
+                <ul class='cruds-ul'>
+                    <li>
+                        <div class='crud-options' id='categorias'>
+                            CATEGORíAS
+                        </div>
+                    </li>
+                    <li>
+                        <div class='crud-options' id='productos'>
+                            MÉTODOS DE RETIRO DE PEDIDOS
+                        </div>
+                    </li>
+                    <li>
+                        <div class='crud-options' id='retiro'>
+                            PRODUCTOS
+                        </div>
+                    </li>
+                    <li>
+                        <div class='crud-options' id='pago'>
+                            MÉTODOS DE PAGO
+                        </div>
+                    </li>
+                </ul>-->
+                
+            </div>
+
+        </div>
+        
+        <div class='section-container'>
+            <div class='section-title'>
+                <h2>REGISTRO DE VENTAS</h2>
+            </div>
+            <div class='section-content' id='purchase-records'>
+                <div class='pr-container'>
+                    <ul>
+                        <li> <!--*ngFor="let record of records;-->
+                            <div class='purchase-record'>
+                                <div class='purchase-id'>ID #</div>
+                                <div class='purchase-info'>
+                                    <p>blablabla</p>
+                                    <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
+                                </div>
+                            </div>
+                        </li>
+                        <li> <!--*ngFor="let record of records;-->
+                            <div class='purchase-record'>
+                                <div class='purchase-id'>ID #</div>
+                                <div class='purchase-info'>
+                                    <p>blablabla</p>
+                                    <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
+                                </div>
+                            </div>
+                        </li>
+                        <li> <!--*ngFor="let record of records;-->
+                            <div class='purchase-record'>
+                                <div class='purchase-id'>ID #</div>
+                                <div class='purchase-info'>
+                                    <p>blablabla</p>
+                                    <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
+                                </div>
+                            </div>
+                        </li>
+                        <li> <!--*ngFor="let record of records;-->
+                            <div class='purchase-record'>
+                                <div class='purchase-id'>ID #</div>
+                                <div class='purchase-info'>
+                                    <p>blablabla</p>
+                                    <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
+                                </div>
+                            </div>
+                        </li>
+                        <li> <!--*ngFor="let record of records;-->
+                            <div class='purchase-record'>
+                                <div class='purchase-id'>ID #</div>
+                                <div class='purchase-info'>
+                                    <p>blablabla</p>
+                                    <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
+                                </div>
+                            </div>
+                        </li>
+                        <li> <!--*ngFor="let record of records;-->
+                            <div class='purchase-record'>
+                                <div class='purchase-id'>ID #</div>
+                                <div class='purchase-info'>
+                                    <p>blablabla</p>
+                                    <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
+                                </div>
+                            </div>
+                        </li>
+                        <li> <!--*ngFor="let record of records;-->
+                            <div class='purchase-record'>
+                                <div class='purchase-id'>ID #</div>
+                                <div class='purchase-info'>
+                                    <p>blablabla</p>
+                                    <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
+                                </div>
+                            </div>
+                        </li>
+                        <li> <!--*ngFor="let record of records;-->
+                            <div class='purchase-record'>
+                                <div class='purchase-id'>ID #</div>
+                                <div class='purchase-info'>
+                                    <p>blablabla</p>
+                                    <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
+                                </div>
+                            </div>
+                        </li>
+                        <li> <!--*ngFor="let record of records;-->
+                            <div class='purchase-record'>
+                                <div class='purchase-id'>ID #</div>
+                                <div class='purchase-info'>
+                                    <p>blablabla</p>
+                                    <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
+                                </div>
+                            </div>
+                        </li>
+                        <li> <!--*ngFor="let record of records;-->
+                            <div class='purchase-record'>
+                                <div class='purchase-id'>ID #</div>
+                                <div class='purchase-info'>
+                                    <p>blablabla</p>
+                                    <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+</body>

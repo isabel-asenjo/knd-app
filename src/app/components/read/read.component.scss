@@ -1,0 +1,75 @@
+@import 'src/app/styles/lib/variables';
+
+ul {
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+
+#purchase-records{
+    background-color: $color-transparent-white;
+    padding:  2%;
+    border-radius: 15px;
+    height: 200px;
+    overflow: hidden;
+
+    .purchase-record{
+        display: flex;
+        flex-direction: row;
+        padding: 5px 10px 5px 20px;
+        font-size: $fs-regular;
+
+        .purchase-id {
+            background-color: $color-dark-turquoise;
+            width: 15%;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            text-align: center;
+            font-size: large;
+        }
+
+        .purchase-info {
+            background-color: white;
+            width: 80%;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+
+            p{
+                padding-left: 2%;
+                color: black;
+            }
+        }
+    }
+
+    
+}
+
+
+
+.pr-container{
+    overflow-y: scroll;
+    border-radius: 15px;
+    height: 200px;
+    width: 98%;
+}
+
+.pr-container::-webkit-scrollbar{
+    width: 10px;
+    background:transparent;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.pr-container::-webkit-scrollbar-thumb{
+    background: #808080;
+    border-radius: 15px;
+}
+
+
+
+thead{
+    background-color: $color-lavander-rose;
+    font-size: large;
+}

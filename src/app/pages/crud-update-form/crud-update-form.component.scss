@@ -1,0 +1,83 @@
+@import 'src/app/styles/lib/variables';
+
+
+*{
+    font-family: $font-text;
+    color: white;
+    overflow-x: hidden;
+}
+body {
+    background-image: $color-bg-gradient;
+    height: 100vh;
+}
+
+.title{
+    text-align: center;
+    padding: 15vh;
+    padding-bottom: 5vh;
+    h1{
+        color: black;
+        font-family: $font-titles;
+    }
+}
+
+.breadcrumbs{
+    width: 100vw;
+    padding-left: 10%;
+    padding-top: 10%;
+}
+
+
+.crud-view {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40vh;
+}
+
+
+app-crud-buttons{
+    width: 20%;
+    margin: 20px;
+    height: 100%;
+}
+
+.crud-detail {
+    width: 70vw;
+    padding: 10%;
+    padding-left:5%;
+    display: flex;
+    flex-direction: row;
+}
+
+app-read {
+    width: 85vw;
+    margin-left:5vw;
+}
+
+
+.breadcrumb {
+    background: transparent;
+    font-size: large;
+}
+
+.breadcrumb-item.active {
+    color: $color-gold;
+}
+
+.text-cont{
+    width: 20vw;
+    font-size: xx-large;
+    color: black;
+}
+
+.save-btn{
+    background-color: $color-gold;
+    border: none;
+    text-align: center;
+    height: 8vh;
+    width: 10vw;
+    color: white;
+    font-size: x-large;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.575);
+}

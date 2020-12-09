@@ -1,0 +1,58 @@
+@import 'src/app/styles/lib/variables';
+
+body {
+    background-image: $color-bg-gradient;
+    font-family: $font-text;
+    
+
+    h2{
+        font-family: $font-titles;
+    }
+
+    
+
+    p{
+        padding-top: 2vh;
+        font-size: 3vh;
+    }
+}
+
+
+header{
+    img{
+        width: 100%;
+    }
+}
+
+#history{
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+}
+
+.big-container{
+    background-image: url("/assets/images/generic/byWaves.png");
+    height: 50%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 10vh;
+}
+
+#mission{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+#vision{
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    padding-top: 20vh;
+}
+
+.about-text{
+    padding: 10vh 0 10vh 0;
+}

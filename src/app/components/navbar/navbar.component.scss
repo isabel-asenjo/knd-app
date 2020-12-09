@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: black;
 
 }
 
@@ -38,8 +39,13 @@
 
         li:hover {
             background-color: $color-free-speech-magenta;
-            color: $color-lemon-chiffon;
-            cursor: pointer;
+
+            a{
+              color: $color-lemon-chiffon;
+              cursor: pointer;
+              text-decoration: none;
+            }
+            
         }
     }
 }
