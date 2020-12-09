@@ -66,6 +66,7 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { MapComponent } from './components/map/map.component';
 //import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ImageUploadService } from "./services/image-upload.service";
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -108,6 +109,7 @@ import { ImageUploadService } from "./services/image-upload.service";
     AboutPageComponent,
     ContactPageComponent,
     MapComponent,
+    LoginPageComponent,
     //HomePageComponent,
   ],
   imports: [

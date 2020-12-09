@@ -27,11 +27,13 @@ import { CrudUpdateMetodoPagoComponent } from './pages/crud-update-metodo-pago/c
 import { MetodosPagoFormComponent } from './components/metodos-pago-form/metodos-pago-form.component'
 import { MetodosPagoService } from './services/metodos-pago.service';
 import { CrudDeleteMetodoPagoComponent } from './pages/crud-delete-metodo-pago/crud-delete-metodo-pago.component'
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 const routes: Routes = [
   //{ path: '', component: HomePageComponent },
   { path: 'about', component: AboutPageComponent },
   { path: 'contact', component: ContactPageComponent },
+  { path: 'login', component: LoginPageComponent },
   { path: 'admin', component: AdminMainPageComponent },
   { path: 'admin-cruds', component: AdminCrudsComponent },
   { path: 'admin-cruds/create', component: CrudCreateComponent },
