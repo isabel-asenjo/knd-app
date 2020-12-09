@@ -27,6 +27,10 @@ import { CrudUpdateMetodoPagoComponent } from './pages/crud-update-metodo-pago/c
 import { MetodosPagoFormComponent } from './components/metodos-pago-form/metodos-pago-form.component'
 import { MetodosPagoService } from './services/metodos-pago.service';
 import { CrudDeleteMetodoPagoComponent } from './pages/crud-delete-metodo-pago/crud-delete-metodo-pago.component'
+import { CrudUpdateFormCategoryComponent } from './pages/crud-update-form-category/crud-update-form-category.component';
+import { CrudUpdateFormMetodoPagoComponent } from './pages/crud-update-form-metodo-pago/crud-update-form-metodo-pago.component';
+import { CrudUpdateFormMetodoEnvioComponent } from './pages/crud-update-form-metodo-envio/crud-update-form-metodo-envio.component';
+
 
 const routes: Routes = [
   //{ path: '', component: HomePageComponent },
@@ -34,26 +38,26 @@ const routes: Routes = [
   { path: 'contact', component: ContactPageComponent },
   { path: 'admin', component: AdminMainPageComponent },
   { path: 'admin-cruds', component: AdminCrudsComponent },
-  { path: 'admin-cruds/create', component: CrudCreateComponent },
-  { path: 'admin-cruds/read', component: CrudReadComponent },
-  { path: 'admin-cruds/update', component: CrudUpdateComponent },
-  { path: 'admin-cruds/delete', component: CrudDeleteComponent },
-  { path: 'admin-cruds/:productId/update', component: CrudUpdateFormComponent },
-  { path: 'admin-cruds/create-category', component: CrudCreateCategoryComponent },
-  { path: 'admin-cruds/update-category', component: CrudUpdateCategoryComponent },
-  { path: 'admin-cruds/:categoryId/update-category', component: CategoryFormComponent },
-  { path: 'admin-cruds/read-category', component: CrudReadCategoryComponent },
-  { path: 'admin-cruds/delete-category', component: CrudDeleteCategoryComponent },
-  { path: 'admin-cruds/create-metodo-envio', component: CrudCreateMetodoEnvioComponent },
-  { path: 'admin-cruds/read-metodo-envio', component: CrudReadMetodoEnvioComponent },
-  { path: 'admin-cruds/update-metodo-envio', component: CrudUpdateMetodoEnvioComponent },
-  { path: 'admin-cruds/:metodoEnvioId/update-metodo-envio', component: MetodosEnvioFormComponent },
-  { path: 'admin-cruds/delete-metodo-envio', component: CrudDeleteMetodoEnvioComponent },
-  { path: 'admin-cruds/create-metodo-pago', component: CrudCreateMetodoPagoComponent },
-  { path: 'admin-cruds/read-metodo-pago', component: CrudReadMetodoPagoComponent },
-  { path: 'admin-cruds/update-metodo-pago', component: CrudUpdateMetodoPagoComponent },
-  { path: 'admin-cruds/:metodoPagoId/update-metodo-pago', component: MetodosPagoFormComponent },
-  { path: 'admin-cruds/delete-metodo-pago', component: CrudDeleteMetodoPagoComponent },
+  { path: 'admin-cruds/product/create', component: CrudCreateComponent },
+  { path: 'admin-cruds/product/read', component: CrudReadComponent },
+  { path: 'admin-cruds/product/update', component: CrudUpdateComponent },
+  { path: 'admin-cruds/product/delete', component: CrudDeleteComponent },
+  { path: 'admin-cruds/product/:productId/update', component: CrudUpdateFormComponent },
+  { path: 'admin-cruds/category/create', component: CrudCreateCategoryComponent },
+  { path: 'admin-cruds/category/update', component: CrudUpdateCategoryComponent },
+  { path: 'admin-cruds/category/:categoryId/update', component: CrudUpdateFormCategoryComponent },
+  { path: 'admin-cruds/category/read', component: CrudReadCategoryComponent },
+  { path: 'admin-cruds/category/delete', component: CrudDeleteCategoryComponent },
+  { path: 'admin-cruds/metodo-envio/create', component: CrudCreateMetodoEnvioComponent },
+  { path: 'admin-cruds/metodo-envio/read', component: CrudReadMetodoEnvioComponent },
+  { path: 'admin-cruds/metodo-envio/update', component: CrudUpdateMetodoEnvioComponent },
+  { path: 'admin-cruds/metodo-envio/:metodoEnvioId/update', component: CrudUpdateFormMetodoEnvioComponent },
+  { path: 'admin-cruds/metodo-envio/delete', component: CrudDeleteMetodoEnvioComponent },
+  { path: 'admin-cruds/metodo-pago/create', component: CrudCreateMetodoPagoComponent },
+  { path: 'admin-cruds/metodo-pago/read', component: CrudReadMetodoPagoComponent },
+  { path: 'admin-cruds/metodo-pago/update', component: CrudUpdateMetodoPagoComponent },
+  { path: 'admin-cruds/metodo-pago/:metodoPagoId/update', component: CrudUpdateFormMetodoPagoComponent },
+  { path: 'admin-cruds/metodo-pago/delete', component: CrudDeleteMetodoPagoComponent },
 ];
 
 @NgModule({

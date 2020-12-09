@@ -18,7 +18,7 @@
                             <th scope="row">{{ metodoEnvio.name }}</th>
                             <th scope="row">{{ metodoEnvio.description }}</th>
                             <th scope="row">{{ metodoEnvio.adicional }}</th>
-                            <a class="btn btn-primary" [routerLink]="['/admin-cruds', metodoEnvio.$key, 'update-metodo-envio']" routerLinkActive="router-link-active"> Update item </a>
+                            <a class="btn btn-primary" [routerLink]="['/admin-cruds/metodo-envio', metodoEnvio.$key, 'update']" routerLinkActive="router-link-active"> Update item </a>
                           </tr>
                         </tbody>
                       </table>

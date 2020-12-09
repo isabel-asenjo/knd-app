@@ -4,7 +4,7 @@
 *{
     font-family: $font-text;
     color: white;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 body {
     background-image: $color-bg-gradient;
@@ -24,6 +24,7 @@ body {
 .breadcrumbs{
     width: 100vw;
     padding-left: 10%;
+    padding-top: 10%;
 }
 
 
@@ -79,11 +80,4 @@ app-read {
     color: white;
     font-size: x-large;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.575);
-}
-
-
-table{
-    th{
-        color: black;
-    }
 }
