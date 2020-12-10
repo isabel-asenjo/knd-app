@@ -1,0 +1,23 @@
+<body>
+<div class='section-container'>
+    <div class='section-title'>
+        <h2>REGISTRO DE VENTAS</h2>
+    </div>
+    <div class='section-content' id='purchase-records'>
+        <div class='pr-container'>
+            <ul>
+                <li *ngFor="let bolsa of bolsas">
+                    <div class='purchase-record' >
+                        <div class='purchase-id'><p>ID #{{bolsa.$key}}</p></div>
+                        <div class='purchase-info'>
+                            <p>PRECIO: ${{bolsa.precio}}</p>
+                        </div>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </div>
+    
+</div></body>

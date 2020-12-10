@@ -36,6 +36,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { CheckoutPageComponent } from './pages/checkout-page/checkout-page.component';
 import { CheckoutPagePagoComponent } from './pages/checkout-page-pago/checkout-page-pago.component';
 import { ProdDeetsComponent } from './pages/prod-deets/prod-deets.component';
+import { CarritoComponent } from './pages/carrito/carrito.component';
 
 
 
@@ -48,6 +49,7 @@ const routes: Routes = [
   { path: 'checkout-pago', canActivate: [AuthGuard], component: CheckoutPagePagoComponent },
   { path: 'contact', component: ContactPageComponent },
   { path: 'login', component: LoginPageComponent },
+  { path: 'cart', canActivate: [AuthGuard], component: CarritoComponent},
   { path: 'admin', canActivate: [AuthGuard], component: AdminMainPageComponent },
   { path: 'admin-cruds', canActivate: [AuthGuard], component: AdminCrudsComponent },
   { path: 'admin-cruds/product/create', canActivate: [AuthGuard], component: CrudCreateComponent },

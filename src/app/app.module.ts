@@ -76,6 +76,7 @@ import { CheckoutPageComponent } from './pages/checkout-page/checkout-page.compo
 import { CheckoutPagePagoComponent } from './pages/checkout-page-pago/checkout-page-pago.component';
 import { ProdDeetsComponent } from './pages/prod-deets/prod-deets.component';
 import { DeetsComponent } from './components/deets/deets.component';
+import { CarritoComponent } from './pages/carrito/carrito.component';
 
 
 @NgModule({
@@ -130,6 +131,7 @@ import { DeetsComponent } from './components/deets/deets.component';
     CheckoutPagePagoComponent,
     ProdDeetsComponent,
     DeetsComponent,
+    CarritoComponent,
   ],
   imports: [
     BrowserModule,
