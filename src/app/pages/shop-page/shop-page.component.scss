@@ -139,7 +139,7 @@ header{
     background-size: cover;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
-    filter: contrast(70%);
+    filter: contrast(80%);
     //filter: saturate(180%);
     overflow: hidden;
     position: relative;
@@ -159,3 +159,12 @@ header{
   
 }
 
+
+
+
+
+.cart-container{
+    margin: 5rem 1rem 1rem 0;
+    padding: 1rem;
+    background-color: $color-transparent-white;
+}
