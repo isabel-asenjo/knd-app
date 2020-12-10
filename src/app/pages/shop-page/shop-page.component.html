@@ -4,6 +4,7 @@
     </header>
     <div class='container'>
         <div class='filter'>
+            <h2>Filtra tu búsqueda</h2>
             <div class='filter-buttons'>
 
             </div>
@@ -16,19 +17,31 @@
                 </form>
             </div>
         </div>
-        <div>
+        <div class='container2'>
             <div class='products'>
                 <div class='options'>
-
+                    <p>options</p>
                 </div>
                 <div class='product-cards'>
-
+                    <ul class="cards">
+                        <li class="cards__item" *ngFor="let prod of products | filterByName:filterName ">
+                        <div class="card">
+                            <img class="card__image card__image--fence" src="{{prod.image}}" alt="{{prod.name}}">
+                            
+                            <button class="btn btn--block card__btn" (click)='showDeets(prod.name)'>{{prod.name}} - ${{prod.price}}</button>
+                            
+                        </div>
+                        </li>
+                    </ul>
                     
                 </div>
             </div>
             <div class='cart'>
-
+                <p>shopping cart here</p>
             </div>
+            
+
+            
         </div>
     </div>
 

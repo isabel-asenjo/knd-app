@@ -1,0 +1,15 @@
+<div class="content" fxLayout="row wrap" fxLayoutGap="10px grid" >
+    <div fxFlex="33%" fxFlex.xs="20%" fxFlex.sm="20%" *ngFor="let prod of products | filterByName:filterName "> <!--| paginate: { itemsPerPage: 9, currentPage: p}-->
+        <mat-card class="mat-elevation-z4" >
+          <mat-card-header>
+            <mat-card-title>{{prod.name}}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="{{prod.image}}" alt="{{prod.name}}">
+          <mat-card-actions>
+            <button type="button" class="btn btn-primary" (click)='showDeets(prod.name)'>Detalles</button>
+  
+          </mat-card-actions>
+        </mat-card>
+      </div>
+</div>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
