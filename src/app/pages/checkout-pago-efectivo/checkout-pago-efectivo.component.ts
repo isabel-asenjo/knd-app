@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { InfoPago } from 'src/app/models/info-pago';
 import { MetodoEnvio } from 'src/app/models/metodo-envio';
+import { MetodoPago } from 'src/app/models/metodo-pago';
 import { InfoPagoService } from 'src/app/services/info-pago.service';
 import { MetodosEnvioService } from 'src/app/services/metodos-envio.service';
 
@@ -13,7 +14,7 @@ import { MetodosEnvioService } from 'src/app/services/metodos-envio.service';
 })
 export class CheckoutPagoEfectivoComponent implements OnInit {
 
-  metodosEnvio: Array<MetodoEnvio> = [];
+  metodosPago: Array<MetodoPago> = [];
   infoEnvios: Array<InfoPago> = [];
   infoPagoForm: FormGroup = null;
   editInfoPago: InfoPago = null;
@@ -46,6 +47,15 @@ export class CheckoutPagoEfectivoComponent implements OnInit {
     })
   }
 
+  onSubmit():void{
+    const newInfoPago: InfoPago = {
+      metodosPago: this.infoPagoForm.get('').value,
+      detalle: this.infoPagoForm.get('detalle').value, 
+    }
+    this.updateInfoPago(newInfoPago);
+    return;
+  }
+
   createForm(): void{
     this.infoPagoForm = this.fb.group({
       detalle: [''],
@@ -76,5 +86,11 @@ export class CheckoutPagoEfectivoComponent implements OnInit {
     });
   }
 
+  updateInfoPago(data: InfoPago): void {
+    this.infoPagoService.updateInfoPago(data, this.infoPagoId).then((res) => {
+      this.router.navigate(['/checkout-final']); // modificar esto
+    });
+  }
 
+  
 }

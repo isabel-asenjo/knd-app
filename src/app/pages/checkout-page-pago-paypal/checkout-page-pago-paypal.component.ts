@@ -76,5 +76,19 @@ export class CheckoutPagePagoPaypalComponent implements OnInit {
     });
   }
 
+  updateInfoPago(data: InfoPago): void {
+    this.infoPagoService.updateInfoPago(data, this.infoPagoId).then((res) => {
+      this.router.navigate(['/checkout-final']); // modificar esto
+    });
+  }
+
+  onSubmit():void{
+    const newInfoPago: InfoPago = {
+      metodosPago: this.infoPagoForm.get('').value,
+      detalle: this.infoPagoForm.get('detalle').value, 
+    }
+    this.updateInfoPago(newInfoPago);
+    return;
+  }
 
 }

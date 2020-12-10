@@ -79,4 +79,20 @@ export class CheckoutPageComponent implements OnInit {
     });
   }
 
+  updateInfoEnvio(data: InfoEnvio): void {
+    this.infoEnvioService.updateInfoEnvio(data, this.infoEnvioId).then((res) => {
+      this.router.navigate(['/checkout-pago']); // modificar esto
+    });
+  }
+
+  onSubmit():void{
+    const newInfoEnvio: InfoEnvio = {
+      metodoEnvio: this.infoEnvioForm.get('').value,
+      direccion: this.infoEnvioForm.get('direccion').value, 
+      fechaPickUp: this.infoEnvioForm.get('fechaPickUp').value, 
+    }
+    this.updateInfoEnvio(newInfoEnvio);
+    return;
+  }
+
 }
