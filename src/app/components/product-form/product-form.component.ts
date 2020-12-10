@@ -48,6 +48,7 @@ export class ProductFormComponent implements OnInit {
             description: this.editProduct.description,
             price: this.editProduct.price,
             category: this.editProduct.category,
+            availability: this.editProduct.availability,
             image: this.editProduct.imageUrl,
           })
         })
@@ -61,6 +62,7 @@ export class ProductFormComponent implements OnInit {
       description: [''],
       price: [''],
       category: [''],
+      availability: [''],
       image: [''],
     })
   }
@@ -71,6 +73,7 @@ export class ProductFormComponent implements OnInit {
       description: this.editProduct.description,
       price: this.editProduct.price,
       category: this.editProduct.category,
+      availability: this.editProduct.availability,
       image: this.editProduct.imageUrl,
     })
   }
@@ -82,12 +85,12 @@ export class ProductFormComponent implements OnInit {
   }
   
   onSubmit():void{
-    console.log('sos',this.inputImageProd.nativeElement.value);
     const dataProduct: Product = {
       name: this.productForm.get('name').value,
       description: this.productForm.get('description').value,
       price: this.productForm.get('price').value,
       category: this.productForm.get('category').value,
+      availability: this.productForm.get('availability').value,
       imageUrl: this.inputImageProd.nativeElement.value,
       
 
@@ -95,7 +98,7 @@ export class ProductFormComponent implements OnInit {
     }
     console.log("url: ",dataProduct.imageUrl);
 
-    if ((dataProduct.price > 0) && (dataProduct.name != "")){
+    if ((dataProduct.availability >= 0) && (dataProduct.price > 0) && (dataProduct.name != "")){
 
       if (this.editProduct) {
         var rep = 0;
@@ -130,7 +133,7 @@ export class ProductFormComponent implements OnInit {
 
   updateProduct(data: Product): void {
     this.productService.updateProduct(data, this.productId).then((res) => {
-      this.router.navigate(['/admin-cruds/product/read']); // modificar esto
+      this.router.navigate(['/admin-cruds/product/read']);
     });
   }
   

@@ -36,16 +36,16 @@
         <div class="form-group">
             <label for="avail"> Availability (gr.) </label>
             <input 
-            type="string" 
+            type="number" 
             class="form-control" 
-            formControlName="category"
-            placeholder="Enter category">
+            formControlName="availability"
+            placeholder="Enter availability">
         </div>
-    
+
         <div>
             <p>Seleccionar imagen</p>
             <input type='file' accept='.png, .jpg' (change)='onUpload($event)'>
-            
+
         </div>
         <input type='text' formControlName="image" [value]='urlImage | async' #imageProd class='imageUrl'>
     </div>
