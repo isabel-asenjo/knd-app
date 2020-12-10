@@ -32,6 +32,7 @@ import { CrudUpdateFormCategoryComponent } from './pages/crud-update-form-catego
 import { CrudUpdateFormMetodoPagoComponent } from './pages/crud-update-form-metodo-pago/crud-update-form-metodo-pago.component';
 import { CrudUpdateFormMetodoEnvioComponent } from './pages/crud-update-form-metodo-envio/crud-update-form-metodo-envio.component';
 import { ShopPageComponent } from './pages/shop-page/shop-page.component';
+import { AuthGuard } from './guards/auth.guard';
 
 
 
@@ -41,28 +42,28 @@ const routes: Routes = [
   { path: 'shop', component: ShopPageComponent },
   { path: 'contact', component: ContactPageComponent },
   { path: 'login', component: LoginPageComponent },
-  { path: 'admin', component: AdminMainPageComponent },
-  { path: 'admin-cruds', component: AdminCrudsComponent },
-  { path: 'admin-cruds/product/create', component: CrudCreateComponent },
-  { path: 'admin-cruds/product/read', component: CrudReadComponent },
-  { path: 'admin-cruds/product/update', component: CrudUpdateComponent },
-  { path: 'admin-cruds/product/delete', component: CrudDeleteComponent },
-  { path: 'admin-cruds/product/:productId/update', component: CrudUpdateFormComponent },
-  { path: 'admin-cruds/category/create', component: CrudCreateCategoryComponent },
-  { path: 'admin-cruds/category/update', component: CrudUpdateCategoryComponent },
-  { path: 'admin-cruds/category/:categoryId/update', component: CrudUpdateFormCategoryComponent },
-  { path: 'admin-cruds/category/read', component: CrudReadCategoryComponent },
-  { path: 'admin-cruds/category/delete', component: CrudDeleteCategoryComponent },
-  { path: 'admin-cruds/metodo-envio/create', component: CrudCreateMetodoEnvioComponent },
-  { path: 'admin-cruds/metodo-envio/read', component: CrudReadMetodoEnvioComponent },
-  { path: 'admin-cruds/metodo-envio/update', component: CrudUpdateMetodoEnvioComponent },
-  { path: 'admin-cruds/metodo-envio/:metodoEnvioId/update', component: CrudUpdateFormMetodoEnvioComponent },
-  { path: 'admin-cruds/metodo-envio/delete', component: CrudDeleteMetodoEnvioComponent },
-  { path: 'admin-cruds/metodo-pago/create', component: CrudCreateMetodoPagoComponent },
-  { path: 'admin-cruds/metodo-pago/read', component: CrudReadMetodoPagoComponent },
-  { path: 'admin-cruds/metodo-pago/update', component: CrudUpdateMetodoPagoComponent },
-  { path: 'admin-cruds/metodo-pago/:metodoPagoId/update', component: CrudUpdateFormMetodoPagoComponent },
-  { path: 'admin-cruds/metodo-pago/delete', component: CrudDeleteMetodoPagoComponent },
+  { path: 'admin', canActivate: [AuthGuard], component: AdminMainPageComponent },
+  { path: 'admin-cruds', canActivate: [AuthGuard], component: AdminCrudsComponent },
+  { path: 'admin-cruds/product/create', canActivate: [AuthGuard], component: CrudCreateComponent },
+  { path: 'admin-cruds/product/read', canActivate: [AuthGuard], component: CrudReadComponent },
+  { path: 'admin-cruds/product/update', canActivate: [AuthGuard], component: CrudUpdateComponent },
+  { path: 'admin-cruds/product/delete', canActivate: [AuthGuard], component: CrudDeleteComponent },
+  { path: 'admin-cruds/product/:productId/update', canActivate: [AuthGuard], component: CrudUpdateFormComponent },
+  { path: 'admin-cruds/category/create', canActivate: [AuthGuard], component: CrudCreateCategoryComponent },
+  { path: 'admin-cruds/category/update', canActivate: [AuthGuard], component: CrudUpdateCategoryComponent },
+  { path: 'admin-cruds/category/:categoryId/update', canActivate: [AuthGuard], component: CrudUpdateFormCategoryComponent },
+  { path: 'admin-cruds/category/read', canActivate: [AuthGuard], component: CrudReadCategoryComponent },
+  { path: 'admin-cruds/category/delete', canActivate: [AuthGuard], component: CrudDeleteCategoryComponent },
+  { path: 'admin-cruds/metodo-envio/create', canActivate: [AuthGuard], component: CrudCreateMetodoEnvioComponent },
+  { path: 'admin-cruds/metodo-envio/read', canActivate: [AuthGuard], component: CrudReadMetodoEnvioComponent },
+  { path: 'admin-cruds/metodo-envio/update, canActivate: [AuthGuard]', component: CrudUpdateMetodoEnvioComponent },
+  { path: 'admin-cruds/metodo-envio/:metodoEnvioId/update', canActivate: [AuthGuard], component: CrudUpdateFormMetodoEnvioComponent },
+  { path: 'admin-cruds/metodo-envio/delete', canActivate: [AuthGuard], component: CrudDeleteMetodoEnvioComponent },
+  { path: 'admin-cruds/metodo-pago/create', canActivate: [AuthGuard], component: CrudCreateMetodoPagoComponent },
+  { path: 'admin-cruds/metodo-pago/read', canActivate: [AuthGuard], component: CrudReadMetodoPagoComponent },
+  { path: 'admin-cruds/metodo-pago/update', canActivate: [AuthGuard], component: CrudUpdateMetodoPagoComponent },
+  { path: 'admin-cruds/metodo-pago/:metodoPagoId/update', canActivate: [AuthGuard], component: CrudUpdateFormMetodoPagoComponent },
+  { path: 'admin-cruds/metodo-pago/delete', canActivate: [AuthGuard], component: CrudDeleteMetodoPagoComponent },
 
 ];
 
