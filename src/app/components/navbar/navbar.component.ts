@@ -2,7 +2,12 @@ import { NullTemplateVisitor } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'firebase';
+import { Carrito } from 'src/app/models/carrito';
+import { Cliente } from 'src/app/models/cliente';
 import { AuthService } from 'src/app/services/auth.service';
+import { BolsaService } from 'src/app/services/bolsa.service';
+import { CarritoService } from 'src/app/services/carrito.service';
+import { ClienteService } from 'src/app/services/cliente.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,8 +17,10 @@ import { AuthService } from 'src/app/services/auth.service';
 export class NavbarComponent implements OnInit {
   isAuthenticated = false;
   user: User = null;
+  cliente: Cliente = null;
+  clientes: Array<Cliente>;
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private clienteService : ClienteService,private carritoService : CarritoService, private bolsaService : BolsaService, private router: Router) { }
 
   ngOnInit(): void {
     this.getCurrentUser();
@@ -43,6 +50,47 @@ export class NavbarComponent implements OnInit {
       this.router.navigate(['/']);
       console.log(this.isAuthenticated);
     })
+  }
+
+
+  createClient(): void{
+    var registered = false;
+    for (var c of this.clientes){
+      if (c.correo == this.user.email){
+        registered = true;
+      }
+    }
+
+    if (!registered){
+
+      const newCarrito: Carrito={
+        bolsas: null,
+      }
+
+
+      const newCliente: Cliente = {
+        nombre: this.user.displayName,
+        correo: this.user.email,
+        carrito: this.carritoService.createCarrito(newCarrito),
+        compras: null,
+      }
+  
+      this.clienteService.createCliente(newCliente);
+    }
+    
+  }
+
+
+  getClientes(): void {
+    this.clienteService.getAllClientes().subscribe((items) => {
+      this.clientes = items.map(
+        (item) =>
+          ({
+            ...item.payload.doc.data(),
+            $key: item.payload.doc['id'],
+          } as Cliente)
+      )
+    });
   }
 
 }

@@ -6,6 +6,11 @@ import { MatCardModule } from "@angular/material/card";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from "@angular/material/button";
 import { Router, ActivatedRoute } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
+import { User } from 'firebase';
+import { Cliente } from 'src/app/models/cliente';
+import { ClienteService } from 'src/app/services/cliente.service';
+import { Bolsa } from 'src/app/models/bolsa';
 
 
 
@@ -18,13 +23,19 @@ export class ShopPageComponent implements OnInit {
   products: Array<Product> = [];
   singleProd: Product = null;
   productId: string;
+  isAuthenticated = false;
+  user: User = null;
+  client: Cliente = null;
+  clientes: Array<Cliente> = [];
+  bags: Array<Bolsa>;
 
-  constructor(private productService : ProductsService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private clienteService : ClienteService, private productService : ProductsService, private router: Router, private route: ActivatedRoute, private authService: AuthService) { }
   filterProd = '';
   p: number = 1;
 
   ngOnInit(): void {
     this.getProducts();
+    this.authService.getCurrentUser();
   }
 
 
@@ -68,6 +79,42 @@ export class ShopPageComponent implements OnInit {
         })
       }
     })
+  }
+
+
+  getCurrentUser(): void {
+    this.authService.getCurrentUser().subscribe(response => {
+      if (response) {
+        this.isAuthenticated = true;
+        this.user = response;
+        return;
+      }
+
+      this.isAuthenticated = false;
+      this.user = null;
+    });
+  }
+
+
+  getClientes(): void {
+    this.clienteService.getAllClientes().subscribe((items) => {
+      this.clientes = items.map(
+        (item) =>
+          ({
+            ...item.payload.doc.data(),
+            $key: item.payload.doc['id'],
+          } as Cliente)
+      )
+    });
+  }
+
+  getActualClient(): void{
+    for (var c of this.clientes){
+      if (c.correo == this.user.email){
+        this.client = c;
+        this.bags = this.client.carrito.bolsas;
+      }
+    }
   }
 
 }
