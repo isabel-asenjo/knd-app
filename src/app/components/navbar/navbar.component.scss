@@ -52,7 +52,7 @@
 
 
 #logoNavbar{
-    height: 50px;
+    height: 3rem;
 }
 
 
@@ -61,6 +61,14 @@
 }
 #userCircle{
   padding: 0 0.5rem 0 0;
+}
+
+
+.dropdown-item{
+  height: 2.5rem;
+  font-size: $fs-regular;
+  padding: 0.25rem;
+  background-color: $color-free-speech-magenta;
 }
 
 
