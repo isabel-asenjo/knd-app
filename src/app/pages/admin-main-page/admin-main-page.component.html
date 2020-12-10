@@ -66,96 +66,15 @@
             <div class='section-content' id='purchase-records'>
                 <div class='pr-container'>
                     <ul>
-                        <li> <!--*ngFor="let record of records;-->
-                            <div class='purchase-record'>
+                        <li *ngFor="let compra of compras">
+                            <div class='purchase-record' >
                                 <div class='purchase-id'>ID #</div>
                                 <div class='purchase-info'>
-                                    <p>blablabla</p>
-                                    <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
+                                    <p>USERNAME: {{compra.clientId}} ; PRICE: ${{compra.precio}} ; STATUS: {{compra.estatus}}</p>
                                 </div>
                             </div>
                         </li>
-                        <li> <!--*ngFor="let record of records;-->
-                            <div class='purchase-record'>
-                                <div class='purchase-id'>ID #</div>
-                                <div class='purchase-info'>
-                                    <p>blablabla</p>
-                                    <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
-                                </div>
-                            </div>
-                        </li>
-                        <li> <!--*ngFor="let record of records;-->
-                            <div class='purchase-record'>
-                                <div class='purchase-id'>ID #</div>
-                                <div class='purchase-info'>
-                                    <p>blablabla</p>
-                                    <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
-                                </div>
-                            </div>
-                        </li>
-                        <li> <!--*ngFor="let record of records;-->
-                            <div class='purchase-record'>
-                                <div class='purchase-id'>ID #</div>
-                                <div class='purchase-info'>
-                                    <p>blablabla</p>
-                                    <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
-                                </div>
-                            </div>
-                        </li>
-                        <li> <!--*ngFor="let record of records;-->
-                            <div class='purchase-record'>
-                                <div class='purchase-id'>ID #</div>
-                                <div class='purchase-info'>
-                                    <p>blablabla</p>
-                                    <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
-                                </div>
-                            </div>
-                        </li>
-                        <li> <!--*ngFor="let record of records;-->
-                            <div class='purchase-record'>
-                                <div class='purchase-id'>ID #</div>
-                                <div class='purchase-info'>
-                                    <p>blablabla</p>
-                                    <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
-                                </div>
-                            </div>
-                        </li>
-                        <li> <!--*ngFor="let record of records;-->
-                            <div class='purchase-record'>
-                                <div class='purchase-id'>ID #</div>
-                                <div class='purchase-info'>
-                                    <p>blablabla</p>
-                                    <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
-                                </div>
-                            </div>
-                        </li>
-                        <li> <!--*ngFor="let record of records;-->
-                            <div class='purchase-record'>
-                                <div class='purchase-id'>ID #</div>
-                                <div class='purchase-info'>
-                                    <p>blablabla</p>
-                                    <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
-                                </div>
-                            </div>
-                        </li>
-                        <li> <!--*ngFor="let record of records;-->
-                            <div class='purchase-record'>
-                                <div class='purchase-id'>ID #</div>
-                                <div class='purchase-info'>
-                                    <p>blablabla</p>
-                                    <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
-                                </div>
-                            </div>
-                        </li>
-                        <li> <!--*ngFor="let record of records;-->
-                            <div class='purchase-record'>
-                                <div class='purchase-id'>ID #</div>
-                                <div class='purchase-info'>
-                                    <p>blablabla</p>
-                                    <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
-                                </div>
-                            </div>
-                        </li>
+                        
                     </ul>
                 </div>
                 
