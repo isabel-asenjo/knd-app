@@ -8,6 +8,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { BolsaService } from 'src/app/services/bolsa.service';
 import { CarritoService } from 'src/app/services/carrito.service';
 import { ClienteService } from 'src/app/services/cliente.service';
+import { Wishlist } from 'src/app/models/wishlist';
 
 @Component({
   selector: 'app-navbar',
@@ -64,15 +65,16 @@ export class NavbarComponent implements OnInit {
     if (!registered){
 
       const newCarrito: Carrito={
-        bolsas: null,
+        bolsas: [],
       }
 
 
       const newCliente: Cliente = {
         nombre: this.user.displayName,
         correo: this.user.email,
-        carrito: this.carritoService.createCarrito(newCarrito),
+        bolsas: [],
         compras: null,
+        wishlist: null,
       }
   
       this.clienteService.createCliente(newCliente);

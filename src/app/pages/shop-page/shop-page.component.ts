@@ -11,7 +11,7 @@ import { User } from 'firebase';
 import { Cliente } from 'src/app/models/cliente';
 import { ClienteService } from 'src/app/services/cliente.service';
 import { Bolsa } from 'src/app/models/bolsa';
-import { FilterByNamePipe } from './pipes/filter-by-name.pipe';
+import { BolsaService } from 'src/app/services/bolsa.service';
 
 
 
@@ -30,7 +30,7 @@ export class ShopPageComponent implements OnInit {
   clientes: Array<Cliente> = [];
   bags: Array<Bolsa>;
 
-  constructor(private clienteService : ClienteService, private productService : ProductsService, private router: Router, private route: ActivatedRoute, private authService: AuthService) { }
+  constructor(private clienteService : ClienteService, private bolsaService : BolsaService, private productService : ProductsService, private router: Router, private route: ActivatedRoute, private authService: AuthService) { }
   filterProd = '';
   p: number = 1;
 
