@@ -14,6 +14,8 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <button class="dropdown-item" (click)="loginWithGoogle()"> Login with Google </button>
             <div class="dropdown-divider"></div>
+            <button *ngIf="isAuthenticated" class="dropdown-item" [routerLink]="['/profile']" routerLinkActive="router-link-active">Tu perfil</button>
+            <div class="dropdown-divider"></div>
             <button *ngIf="isAuthenticated" class="dropdown-item" (click)="logout()">Logout</button>
           </div>
           
