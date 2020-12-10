@@ -11,6 +11,7 @@ import { User } from 'firebase';
 import { Cliente } from 'src/app/models/cliente';
 import { ClienteService } from 'src/app/services/cliente.service';
 import { Bolsa } from 'src/app/models/bolsa';
+import { FilterByNamePipe } from './pipes/filter-by-name.pipe';
 
 
 
