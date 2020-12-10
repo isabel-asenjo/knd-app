@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/models/product';
@@ -13,6 +13,7 @@ import { finalize } from 'rxjs/operators';
   styleUrls: ['./product-form.component.scss']
 })
 export class ProductFormComponent implements OnInit {
+  @ViewChild('imageProd',{static:true}) inputImageProd: ElementRef;
   productForm: FormGroup = null;
   products: Array<Product> = [];
 
@@ -47,6 +48,7 @@ export class ProductFormComponent implements OnInit {
             description: this.editProduct.description,
             price: this.editProduct.price,
             category: this.editProduct.category,
+            image: this.editProduct.imageUrl,
           })
         })
       }
@@ -69,6 +71,7 @@ export class ProductFormComponent implements OnInit {
       description: this.editProduct.description,
       price: this.editProduct.price,
       category: this.editProduct.category,
+      image: this.editProduct.imageUrl,
     })
   }
   
@@ -79,14 +82,18 @@ export class ProductFormComponent implements OnInit {
   }
   
   onSubmit():void{
+    console.log('sos',this.inputImageProd.nativeElement.value);
     const dataProduct: Product = {
       name: this.productForm.get('name').value,
       description: this.productForm.get('description').value,
       price: this.productForm.get('price').value,
       category: this.productForm.get('category').value,
-      imageUrl: this.image,
+      imageUrl: this.inputImageProd.nativeElement.value,
+      
+
 
     }
+    console.log("url: ",dataProduct.imageUrl);
 
     if ((dataProduct.price > 0) && (dataProduct.name != "")){
 

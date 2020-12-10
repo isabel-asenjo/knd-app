@@ -37,7 +37,7 @@
         <input type='file' accept='.png, .jpg' (change)='onUpload($event)'>
         
     </div>
-    <input type='text' [value]='urlImage | async'>
+    <input type='text' formControlName="image" [value]='urlImage | async' #imageProd>
 
     <button type="submit" class="btn btn-primary"> Submit</button>
 </form>
