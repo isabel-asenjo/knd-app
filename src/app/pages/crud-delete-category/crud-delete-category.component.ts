@@ -27,7 +27,7 @@ export class CrudDeleteCategoryComponent implements OnInit {
         (item) =>
           ({
             ...item.payload.doc.data(),
-            $key: item.payload.doc.id,
+            $key: item.payload.doc['id'],
           } as Category)
       )
     });
@@ -35,6 +35,7 @@ export class CrudDeleteCategoryComponent implements OnInit {
 
   deleteCategory(categoryId): void{
     this.categoryService.deleteCategory(categoryId).then(res =>{}).catch(err=>console.log(err));
+    alert("Se ha eliminado la categoría exitosamente.");
   }
 
   activate(): boolean {

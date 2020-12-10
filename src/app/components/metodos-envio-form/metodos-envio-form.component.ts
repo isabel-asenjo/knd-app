@@ -12,6 +12,8 @@ import { MetodosEnvioService } from 'src/app/services/metodos-envio.service';
 export class MetodosEnvioFormComponent implements OnInit {
 
   metodoEnvioForm: FormGroup = null;
+  metodosEnvio: Array<MetodoEnvio> = [];
+
 
   constructor(private metodosEnvioService: MetodosEnvioService, private fb: FormBuilder, private router: Router, private route: ActivatedRoute) { }
 
@@ -20,7 +22,7 @@ export class MetodosEnvioFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.createForm();
-
+    this.getAllMetodosEnvio();
     this.getUrlParams();
   }
 
@@ -74,7 +76,56 @@ export class MetodosEnvioFormComponent implements OnInit {
       adicional: this.metodoEnvioForm.get('adicional').value,
     }
 
-    this.createMetodoEnvio(newMetodoEnvio);
+
+    if ((newMetodoEnvio.name != "") && (newMetodoEnvio.description != "")){
+
+      if (this.editMetodoEnvio) {
+        var rep = 0;
+        for (var p of this.metodosEnvio){
+          if (p.name == newMetodoEnvio.name){
+            rep+=1
+            if (rep == 2){
+              alert("Ya existe un método de envío con este nombre en su base de datos.");
+              return;
+            }
+          }
+          
+        }
+        this.updateMetodoEnvio(newMetodoEnvio);
+        return;
+      }
+  
+      for (var p of this.metodosEnvio){
+        if (p.name == newMetodoEnvio.name){
+          alert("Ya existe un método de envío con este nombre en su base de datos.");
+          return;
+        }
+      }
+      this.createMetodoEnvio(newMetodoEnvio);
+      return;      
+    }
+
+    alert("Ha ingresado algún dato inválido o ha dejado un campo vacío.");
   }
+
+
+  getAllMetodosEnvio(): void {
+    this.metodosEnvioService.getAllMetodosEnvio().subscribe((items) => {
+      this.metodosEnvio = items.map(
+        (item) =>
+          ({
+            ...item.payload.doc.data(),
+            $key: item.payload.doc['id'],
+          } as MetodoEnvio)
+      )
+    });
+  }
+
+  updateMetodoEnvio(data: MetodoEnvio): void {
+    this.metodosEnvioService.updateMetodoEnvio(data, this.metodoEnvioId).then((res) => {
+      this.router.navigate(['/admin-cruds/metodo-envio/read']);
+    });
+  }
+
 
 }

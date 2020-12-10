@@ -33,12 +33,15 @@ export class NavbarComponent implements OnInit {
   }
 
   loginWithGoogle(): void{
-    this.authService.loginWithGoogle().then(response => {})
+    this.authService.loginWithGoogle().then(response => {
+      console.log(this.isAuthenticated);
+    })
   }
 
   logout(): void{
     this.authService.logout().then(() =>{
       this.router.navigate(['/']);
+      console.log(this.isAuthenticated);
     })
   }
 
