@@ -2,7 +2,6 @@
 
 body {
     background-image: $color-bg-gradient;
-    height: 100vh;
 }
 
 
@@ -12,17 +11,23 @@ body {
     padding: 15vh;
 }
 
+.checkout-step{
+    font-family: $font-text;
+    padding-left: 2rem;
+}
+
 .sections{
     display: flex;
     flex-direction: row;
     font-family: $font-text;
     justify-content: space-evenly;
+    padding-bottom: 2rem;
     
     .section-title{
         color: white;
         background-color: $color-dark-turquoise;
-        padding: 5px 0 5px 0;
-        border-radius: 25px;
+        padding: 0.5rem 0 0.5rem 0;
+        border-radius: 2rem;
         width: 40vw;
         text-align: center;
         font-size: x-large;

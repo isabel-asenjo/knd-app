@@ -1,15 +1,17 @@
 <body>
     <div class="title">
         <h1>Checkout</h1>
-        <h1>Seleccione un metodo de envio</h1>
     </div>
-
+    <div class='checkout-step'>
+        <h2>Seleccione un metodo de envio</h2>
+    </div>
+    <hr>
     <div class='sections'>
         <div class='section-container'>
             <div class='section-title'>
                 <h2>DELIVERY</h2>
             </div>
-            <div class='section-content' id='cruds'>
+            <div class='section-content'>
                 <div>
                     <form [formGroup]="infoEnvioForm" (ngSubmit)="onSubmit()">
                         <div class="form-group">
@@ -37,19 +39,26 @@
             <div class='section-title'>
                 <h2>PICK-UP</h2>
             </div>
-            <div class='section-content' id='purchase-records'>
-                <div class='pr-container'>
-                    <ul>
-                        <li *ngFor="let compra of compras">
-                            <div class='purchase-record' >
-                                <div class='purchase-id'>ID #</div>
-                                <div class='purchase-info'>
-                                    <p>USERNAME: {{compra.clientId}} ; PRICE: ${{compra.precio}} ; STATUS: {{compra.estatus}}</p>
-                                </div>
-                            </div>
-                        </li>
-                        
-                    </ul>
+            <div class='section-content' >
+                <div>
+                    <form [formGroup]="infoPickupForm" (ngSubmit)="onSubmit()">
+                        <div class='form-group'>
+                            <label for='pickupDate'>Fecha</label>
+                            <input type='date'
+                            class='form-control'
+                            formControlName='fecha'
+                            placeholder="Ingrese la fecha de retiro">
+                        </div>
+                        <div class="form-group">
+                            <label for="pickupTime">Hora</label>
+                            <input 
+                            type="time" 
+                            class="form-control" 
+                            formControlName="hora"
+                            placeholder="Ingrese la hora a la que buscará su pedido">
+                        </div>
+                        <button type="submit" class="btn btn-primary" [routerLink]="['/checkout-pago']" routerLinkActive="router-link-active" > Submit </button>
+                    </form>
                 </div>
                 
             </div>

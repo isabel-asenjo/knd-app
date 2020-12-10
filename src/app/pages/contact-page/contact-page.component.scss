@@ -32,10 +32,19 @@ header{
     padding: 10vh;
 }
 
-
+.foto{
+    padding:2rem;
+    img{
+        width: 25rem;
+    }
+}
 
 .locations{
     list-style-type: none;
+    li{
+        padding: 0.5rem;
+        font-size: larger;
+    }
 }
 
 
