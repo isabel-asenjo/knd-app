@@ -23,15 +23,15 @@ export class CompraService {
     return this.compraCollection.doc<Compra>(compraId).snapshotChanges();
   }
   
-  createProduct(newCompra: Compra): Promise<any> {
+  createCompra(newCompra: Compra): Promise<any> {
     return this.compraCollection.add(newCompra);
   }
 
-  updateProduct(data: Compra, docId: string): Promise<void> {
+  updateCompra(data: Compra, docId: string): Promise<void> {
     return this.compraCollection.doc<Compra>(docId).update(data);
   }
 
-  deleteProduct(docId: string): Promise<void>{
+  deleteCompra(docId: string): Promise<void>{
     return this.compraCollection.doc<Compra>(docId).delete();
   }
 
