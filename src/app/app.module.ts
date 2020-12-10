@@ -81,6 +81,7 @@ import { CheckoutPagePagoTarjetaComponent } from './pages/checkout-page-pago-tar
 import { CheckoutPagoEfectivoComponent } from './pages/checkout-pago-efectivo/checkout-pago-efectivo.component';
 import { CheckoutFinalComponent } from './pages/checkout-final/checkout-final.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 
 @NgModule({
@@ -140,6 +141,7 @@ import { CarritoComponent } from './pages/carrito/carrito.component';
     CheckoutPagoEfectivoComponent,
     CheckoutFinalComponent,
     CarritoComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

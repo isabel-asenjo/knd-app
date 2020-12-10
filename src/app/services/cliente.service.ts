@@ -19,6 +19,7 @@ export class ClienteService {
 
 
   getAllClientes(): Observable<DocumentChangeAction<Cliente>[]>{
+    console.log(this.clienteCollection.snapshotChanges());
     return this.clienteCollection.snapshotChanges();
   }
 
