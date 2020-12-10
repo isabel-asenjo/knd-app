@@ -1,0 +1,270 @@
+@import 'src/app/styles/lib/variables';
+
+body {
+    background-image: $color-bg-gradient;
+    align-items: center;
+    font-family: $font-text;
+    font-size: larger;
+    overflow: hidden;
+
+    .content{
+        display: flex;
+    }
+
+    h1{
+        font-family: $font-titles;
+        padding-bottom: 2rem;
+    }
+
+    h4{
+        color: $color-free-speech-magenta;
+    }
+}
+
+
+.title{
+    font-family: $font-titles;
+    text-align: center;
+    padding: 15vh;
+}
+
+
+
+ul {
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+
+.fas{
+    color: back;
+}
+
+
+
+
+
+.pr-container{
+    overflow-y: scroll;
+    border-radius: 15px;
+    height: 200px;
+    width: 98%;
+}
+
+.pr-container::-webkit-scrollbar{
+    width: 10px;
+    background:transparent;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.pr-container::-webkit-scrollbar-thumb{
+    background: #808080;
+    border-radius: 15px;
+}
+
+.breadcrumbs{
+    width: 100vw;
+    padding-left: 10%;
+    padding-top: 5rem;
+}
+
+
+.breadcrumb {
+    background: transparent;
+    font-size: large;
+}
+
+.breadcrumb-item.active {
+    color: $color-gold;
+}
+
+
+
+
+
+ng-card{
+    //background-color: white;
+    //border-radius: 1rem;
+    width: 80vw;
+    height: 60vh;
+    margin: 10rem;
+    margin-top: 0;
+
+    ng-card-content{
+        display: flex;
+        flex-direction: row;
+
+        .info{
+            padding: 2.5rem;
+            padding-top: 0;
+        }
+    }
+}
+
+.imagen{
+    height: 60vh;
+    overflow: hidden;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.buttons{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    button{
+        color: white;
+        background-color: $color-dark-turquoise;
+        box-shadow: 0 5px 10px -3.5px rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 0.25rem;
+    }
+}
+
+
+
+@import 'src/app/styles/lib/variables';
+
+body {
+    background-image: $color-bg-gradient;
+    height: 100vh;
+}
+
+
+.title{
+    font-family: $font-titles;
+    text-align: center;
+    padding: 15vh;
+}
+
+.sections{
+    display: flex;
+    flex-direction: row;
+    font-family: $font-text;
+    justify-content: space-evenly;
+    
+    .section-title{
+        color: white;
+        background-color: $color-dark-turquoise;
+        padding: 0.25rem 0 0.25rem 0;
+        border-radius: 1.5rem;
+        width: 40vw;
+        text-align: center;
+        font-size: x-large;
+        margin-bottom: 5vh;
+    }
+}
+
+
+
+ul {
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+
+
+#cruds{
+    height: 15rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    color: $color-gold;
+    
+}
+
+
+.cruds-ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+
+
+.crud-options{
+    background-color: $color-transparent-white;
+    height: 15vh;
+    width: 30vh;
+    margin: 0.5rem 0 0.5rem 0;
+    border-radius: 1rem;
+    padding: 2.5%;
+    cursor: pointer;
+}
+
+#purchase-records{
+    background-color: $color-transparent-white;
+    padding:  2%;
+    border-radius: 1rem;
+    height: 15rem;
+    overflow: hidden;
+
+    .purchase-record{
+        display: flex;
+        flex-direction: row;
+        padding: 5px 10px 5px 20px;
+        font-size: $fs-regular;
+
+        .purchase-id {
+            background-color: $color-dark-turquoise;
+            width: 30%;
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+            text-align: center;
+            font-size: large;
+            font-size: small;
+            padding-top:1rem;
+        }
+
+        .purchase-info {
+            background-color: white;
+            width: 70%;
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            padding-top:0.5rem;
+
+            p{
+                padding-left: 2%;
+            }
+        }
+    }
+
+    
+}
+
+
+
+.fas{
+    color: back;
+}
+
+
+
+
+
+.pr-container{
+    overflow-y: scroll;
+    border-radius: 15px;
+    height: 200px;
+    width: 98%;
+}
+
+.pr-container::-webkit-scrollbar{
+    width: 10px;
+    background:transparent;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.pr-container::-webkit-scrollbar-thumb{
+    background: #808080;
+    border-radius: 15px;
+}

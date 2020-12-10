@@ -36,7 +36,10 @@ export class ShopPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProducts();
-    this.authService.getCurrentUser();
+    this.getCurrentUser();
+    this.getClientes();
+    console.log(this.clientes);
+    this.getActualClient();
   }
 
 
@@ -98,6 +101,7 @@ export class ShopPageComponent implements OnInit {
 
 
   getClientes(): void {
+    console.log("running");
     this.clienteService.getAllClientes().subscribe((items) => {
       this.clientes = items.map(
         (item) =>
@@ -110,10 +114,14 @@ export class ShopPageComponent implements OnInit {
   }
 
   getActualClient(): void{
+    console.log("clientes",this.clientes);
+    console.log("email",this.user.email);
     for (var c of this.clientes){
+      console.log(c.correo);
       if (c.correo == this.user.email){
         this.client = c;
         this.bags = this.client.bolsas;
+        console.log(this.bags);
       }
     }
   }

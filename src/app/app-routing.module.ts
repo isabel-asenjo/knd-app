@@ -40,6 +40,7 @@ import { CheckoutPagePagoPaypalComponent } from './pages/checkout-page-pago-payp
 import { CheckoutPagePagoTarjetaComponent } from './pages/checkout-page-pago-tarjeta/checkout-page-pago-tarjeta.component';
 import { CheckoutPagoEfectivoComponent } from './pages/checkout-pago-efectivo/checkout-pago-efectivo.component';
 import { CheckoutFinalComponent } from './pages/checkout-final/checkout-final.component';
+import { CarritoComponent } from './pages/carrito/carrito.component';
 
 
 
@@ -56,6 +57,7 @@ const routes: Routes = [
   { path: 'checkout-final', canActivate: [AuthGuard], component: CheckoutFinalComponent },
   { path: 'contact', component: ContactPageComponent },
   { path: 'login', component: LoginPageComponent },
+  { path: 'cart', canActivate: [AuthGuard], component: CarritoComponent},
   { path: 'admin', canActivate: [AuthGuard], component: AdminMainPageComponent },
   { path: 'admin-cruds', canActivate: [AuthGuard], component: AdminCrudsComponent },
   { path: 'admin-cruds/product/create', canActivate: [AuthGuard], component: CrudCreateComponent },

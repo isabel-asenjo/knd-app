@@ -80,6 +80,7 @@ import { CheckoutPagePagoPaypalComponent } from './pages/checkout-page-pago-payp
 import { CheckoutPagePagoTarjetaComponent } from './pages/checkout-page-pago-tarjeta/checkout-page-pago-tarjeta.component';
 import { CheckoutPagoEfectivoComponent } from './pages/checkout-pago-efectivo/checkout-pago-efectivo.component';
 import { CheckoutFinalComponent } from './pages/checkout-final/checkout-final.component';
+import { CarritoComponent } from './pages/carrito/carrito.component';
 
 
 @NgModule({
@@ -138,6 +139,7 @@ import { CheckoutFinalComponent } from './pages/checkout-final/checkout-final.co
     CheckoutPagePagoTarjetaComponent,
     CheckoutPagoEfectivoComponent,
     CheckoutFinalComponent,
+    CarritoComponent,
   ],
   imports: [
     BrowserModule,
