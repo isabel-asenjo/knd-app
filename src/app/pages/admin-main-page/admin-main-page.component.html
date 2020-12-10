@@ -68,7 +68,7 @@
                     <ul>
                         <li *ngFor="let compra of compras">
                             <div class='purchase-record' >
-                                <div class='purchase-id'>ID #</div>
+                                <div class='purchase-id'><p>ID #{{compra.$key}}</p></div>
                                 <div class='purchase-info'>
                                     <p>USERNAME: {{compra.clientId}} ; PRICE: ${{compra.precio}} ; STATUS: {{compra.estatus}}</p>
                                 </div>
