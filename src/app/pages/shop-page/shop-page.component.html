@@ -6,7 +6,9 @@
         <div class='filter'>
             <h2>Filtra tu búsqueda</h2>
             <div class='filter-buttons'>
-
+                <button class='btn active' ng-click='changeBtnStyle()' [routerLink]="['/admin-cruds/product/create']" routerLinkActive="router-link-active">PRECIO</button>
+                <button class='btn active' ng-click='changeBtnStyle()' [routerLink]="['/admin-cruds/product/read']" routerLinkActive="router-link-active" >PRODUCTO</button>
+                <button class='btn active'[routerLink]="['/admin-cruds/product/update']" routerLinkActive="router-link-active">CATEGORÍA</button>
             </div>
             <div class='filter-input'>
                 <form class="form-inline">
@@ -20,13 +22,16 @@
         <div class='container2'>
             <div class='products'>
                 <div class='options'>
-                    <p>options</p>
+                    <button class='btn active' ng-click='changeBtnStyle()' [routerLink]="['/admin-cruds/product/create']" routerLinkActive="router-link-active">PRECIO</button>
+                    <button class='btn active' ng-click='changeBtnStyle()' [routerLink]="['/admin-cruds/product/read']" routerLinkActive="router-link-active" >PRODUCTO</button>
+                    <button class='btn active'[routerLink]="['/admin-cruds/product/update']" routerLinkActive="router-link-active">CATEGORÍA</button>
+                        
                 </div>
                 <div class='product-cards'>
                     <ul class="cards">
                         <li class="cards__item" *ngFor="let prod of products | filterByName:filterName ">
                         <div class="card">
-                            <img class="card__image card__image--fence" src="{{prod.image}}" alt="{{prod.name}}">
+                            <img class="card__image card__image--fence" src="{{prod.imageUrl}}" alt="{{prod.name}}">
                             
                             <button class="btn btn--block card__btn" (click)='showDeets(prod.name)'>{{prod.name}} - ${{prod.price}}</button>
                             
@@ -39,6 +44,17 @@
             <div class='cart'>
                 <div class='cart-container'>
                     <h3>SHOPPING CART</h3>
+                    <ul>
+                        <li> <!--*ngFor="let record of records;-->
+                            <div class='bag'>
+                                <div class='bag-info'>
+                                    <p>blablabla</p>
+                                    <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
+                                </div>
+                                <div class='delete-bag'>DEL</div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
             

@@ -167,4 +167,37 @@ header{
     margin: 5rem 1rem 1rem 0;
     padding: 1rem;
     background-color: $color-transparent-white;
+    border-radius: 1rem;
+
+    ul{
+        list-style: none;
+        padding:0;
+    }
+    
+    .bag{
+        display: flex;
+        flex-direction: row;
+        font-size: $fs-regular;
+
+        .delete-bag {
+            background-color: rgb(207, 207, 207);
+            width: 15%;
+            border-top-right-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+            text-align: center;
+            font-size: large;
+        }
+
+        .bag-info {
+            background-color: white;
+            width: 80%;
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+    
+            p{
+                padding-left: 2%;
+            }
+        }
+    }
+    
 }
