@@ -11,49 +11,12 @@
                 <h2>METODOS DE PAGO</h2>
             </div>
             <div>
-                <select name='payment-method'>
-                    <option>Paypal</option> <!--esto hay que hacerlo con firebase-->
-                    <option>Tarjeta de crédito</option>
-                    <option>Efectivo</option>
-                </select>
-            </div>
-
-
-
-
-
-
-            <!--
-            <div class='section-content' id='cruds'>
-                <div class='section-content' id='purchase-records'>
-                    <div class='pr-container'>
-                        <ul>
-                            <li>
-                                <div>
-                                    <table class="table">
-                                        <thead>
-                                          <tr>
-                                            <th scope="col"> Nombre </th>-->
-                                            <!--<th scope="col"> Descripcion </th>
-                                            <th scope="col"> Informacion adicional </th>-->
-                                          <!--</tr>
-                                        </thead>
-                                        <tbody>
-                                          <tr *ngFor="let metodoPago of metodosPago">
-                                            <th scope="row">{{ metodoPago.name }}</th>-->
-                                            <!--<th scope="row">{{ metodoPago.description }}</th>
-                                            <th scope="row">{{ metodoPago.adicional }}</th>-->
-                                            <!--<a class="btn btn-primary" [routerLink]="['/checkout-final']" routerLinkActive="router-link-active"> Seleccionar </a>
-                                          </tr>
-                                        </tbody>
-                                      </table>
-                                </div>  
-                            </li>
-                        </ul>
-                    </div>
+                <div class='crud-buttons'>
+                    <button class='btn active' ng-click='changeBtnStyle()' [routerLink]="['/checkout-pago-paypal']" routerLinkActive="router-link-active">PAYPAL</button>
+                    <button class='btn active' ng-click='changeBtnStyle()' [routerLink]="['/checkout-pago-tarjeta']" routerLinkActive="router-link-active" >TARJETA DE CREDITO</button>
+                    <button class='btn active'[routerLink]="['/checkout-pago-efectivo']" routerLinkActive="router-link-active">EFECTIVO</button>
                 </div>
-            </div>-->
-
+            </div>
         </div>
     </div>
     

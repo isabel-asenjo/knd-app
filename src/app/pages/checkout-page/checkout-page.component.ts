@@ -23,7 +23,7 @@ export class CheckoutPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.createForm();
-    this.getAllInfoEnvios();
+    this.getAllInfoEnvio();
     this.getUrlParams();
   }
 
@@ -61,8 +61,14 @@ export class CheckoutPageComponent implements OnInit {
     })
   }
 
-  getAllInfoEnvios(): void {
-    this.infoEnvioService.getAllInfoEnvios().subscribe((items) => {
+  createInfoEnvio(newInfoEnvio: InfoEnvio): void{
+    this.infoEnvioService.createInfoEnvio(newInfoEnvio).then(res =>{
+       this.router.navigate(['/checkout-pago']);
+    }).catch(err => console.log(err));
+  }
+
+  getAllInfoEnvio(): void {
+    this.infoEnvioService.getAllInfoEnvio().subscribe((items) => {
       this.infoEnvios = items.map(
         (item) =>
           ({

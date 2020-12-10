@@ -76,6 +76,10 @@ import { CheckoutPageComponent } from './pages/checkout-page/checkout-page.compo
 import { CheckoutPagePagoComponent } from './pages/checkout-page-pago/checkout-page-pago.component';
 import { ProdDeetsComponent } from './pages/prod-deets/prod-deets.component';
 import { DeetsComponent } from './components/deets/deets.component';
+import { CheckoutPagePagoPaypalComponent } from './pages/checkout-page-pago-paypal/checkout-page-pago-paypal.component';
+import { CheckoutPagePagoTarjetaComponent } from './pages/checkout-page-pago-tarjeta/checkout-page-pago-tarjeta.component';
+import { CheckoutPagoEfectivoComponent } from './pages/checkout-pago-efectivo/checkout-pago-efectivo.component';
+import { CheckoutFinalComponent } from './pages/checkout-final/checkout-final.component';
 
 
 @NgModule({
@@ -130,6 +134,10 @@ import { DeetsComponent } from './components/deets/deets.component';
     CheckoutPagePagoComponent,
     ProdDeetsComponent,
     DeetsComponent,
+    CheckoutPagePagoPaypalComponent,
+    CheckoutPagePagoTarjetaComponent,
+    CheckoutPagoEfectivoComponent,
+    CheckoutFinalComponent,
   ],
   imports: [
     BrowserModule,

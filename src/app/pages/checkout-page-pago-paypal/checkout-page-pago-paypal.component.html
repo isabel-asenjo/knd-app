@@ -1,0 +1,29 @@
+<body>
+    <div class="title">
+        <h1>Checkout</h1>
+    </div>
+    <div class='checkout-step'>
+        <h2> Ingrese sus datos de paypal </h2>
+    </div>
+    <div class='sections'>
+        <div class='section-container'>
+            <div>
+                <div class='section-content'>
+                    <div>
+                        <form [formGroup]="infoPagoForm" (ngSubmit)="onSubmit()">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1"> Datos </label>
+                                <input type="text" 
+                                class="form-control"
+                                formControlName="detalle"
+                                placeholder="Ingrese sus datos">
+                            </div>
+                            <button type="submit" class="btn btn-primary" [routerLink]="['/checkout-final']" routerLinkActive="router-link-active" > Submit </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>

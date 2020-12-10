@@ -36,6 +36,10 @@ import { AuthGuard } from './guards/auth.guard';
 import { CheckoutPageComponent } from './pages/checkout-page/checkout-page.component';
 import { CheckoutPagePagoComponent } from './pages/checkout-page-pago/checkout-page-pago.component';
 import { ProdDeetsComponent } from './pages/prod-deets/prod-deets.component';
+import { CheckoutPagePagoPaypalComponent } from './pages/checkout-page-pago-paypal/checkout-page-pago-paypal.component';
+import { CheckoutPagePagoTarjetaComponent } from './pages/checkout-page-pago-tarjeta/checkout-page-pago-tarjeta.component';
+import { CheckoutPagoEfectivoComponent } from './pages/checkout-pago-efectivo/checkout-pago-efectivo.component';
+import { CheckoutFinalComponent } from './pages/checkout-final/checkout-final.component';
 
 
 
@@ -46,6 +50,10 @@ const routes: Routes = [
   { path: 'shop/:productId', component: ProdDeetsComponent },
   { path: 'checkout', canActivate: [AuthGuard], component: CheckoutPageComponent },
   { path: 'checkout-pago', canActivate: [AuthGuard], component: CheckoutPagePagoComponent },
+  { path: 'checkout-pago-paypal', canActivate: [AuthGuard], component: CheckoutPagePagoPaypalComponent },
+  { path: 'checkout-pago-tarjeta', canActivate: [AuthGuard], component: CheckoutPagePagoTarjetaComponent },
+  { path: 'checkout-pago-efectivo', canActivate: [AuthGuard], component: CheckoutPagoEfectivoComponent },
+  { path: 'checkout-final', canActivate: [AuthGuard], component: CheckoutFinalComponent },
   { path: 'contact', component: ContactPageComponent },
   { path: 'login', component: LoginPageComponent },
   { path: 'admin', canActivate: [AuthGuard], component: AdminMainPageComponent },

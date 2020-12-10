@@ -8,21 +8,29 @@ import { InfoEnvio } from '../models/info-envio';
 })
 export class InfoEnvioService {
 
-  private infoEnviosCollection: AngularFirestoreCollection<InfoEnvio>;
+  private infoEnvioCollection: AngularFirestoreCollection<InfoEnvio>;
 
   constructor(private db: AngularFirestore) { 
-    this.infoEnviosCollection = this.db.collection<InfoEnvio>('infoEnvio');
+    this.infoEnvioCollection = this.db.collection<InfoEnvio>('infoEnvio');
   }
 
-  getAllInfoEnvios(): Observable<DocumentChangeAction<InfoEnvio>[]>{
-    return this.infoEnviosCollection.snapshotChanges();
+  getAllInfoEnvio(): Observable<DocumentChangeAction<InfoEnvio>[]>{
+    return this.infoEnvioCollection.snapshotChanges();
   }
   
   getInfoEnvio(infoEnvioId: string): Observable<Action<DocumentSnapshot<InfoEnvio>>>{
-    return this.infoEnviosCollection.doc<InfoEnvio>(infoEnvioId).snapshotChanges();
+    return this.infoEnvioCollection.doc<InfoEnvio>(infoEnvioId).snapshotChanges();
   }
 
   createInfoEnvio(newInfoEnvio: InfoEnvio): Promise<any> {
-    return this.infoEnviosCollection.add(newInfoEnvio);
+    return this.infoEnvioCollection.add(newInfoEnvio);
+  }
+
+  updateInfoEnvio(data: InfoEnvio, docId: string): Promise<void> {
+    return this.infoEnvioCollection.doc<InfoEnvio>(docId).update(data);
+  }
+
+  deleteInfoEnvio(docId: string): Promise<void>{
+    return this.infoEnvioCollection.doc<InfoEnvio>(docId).delete();
   }
 }

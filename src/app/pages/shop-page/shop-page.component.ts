@@ -113,7 +113,7 @@ export class ShopPageComponent implements OnInit {
     for (var c of this.clientes){
       if (c.correo == this.user.email){
         this.client = c;
-        this.bags = this.client.carrito.bolsas;
+        this.bags = this.client.bolsas;
       }
     }
   }

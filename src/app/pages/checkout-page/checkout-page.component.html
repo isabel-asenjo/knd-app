@@ -22,11 +22,11 @@
                             placeholder="Ingrese la direccion">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1"> Description </label>
+                            <label for="exampleInputPassword1"> Fecha de envio </label>
                             <input 
-                            type="text" 
+                            type="date" 
                             class="form-control" 
-                            formControlName="description"
+                            formControlName="fechaPickUp"
                             placeholder="Ingrese la fecha en la que desea que se efectue el envio">
                         </div>
                         <button type="submit" class="btn btn-primary" [routerLink]="['/checkout-pago']" routerLinkActive="router-link-active" > Submit </button>
@@ -46,17 +46,10 @@
                             <label for='pickupDate'>Fecha</label>
                             <input type='date'
                             class='form-control'
-                            formControlName='fecha'
+                            formControlName='fechaPickUp'
                             placeholder="Ingrese la fecha de retiro">
                         </div>
-                        <div class="form-group">
-                            <label for="pickupTime">Hora</label>
-                            <input 
-                            type="time" 
-                            class="form-control" 
-                            formControlName="hora"
-                            placeholder="Ingrese la hora a la que buscará su pedido">
-                        </div>
+                        
                         <button type="submit" class="btn btn-primary" [routerLink]="['/checkout-pago']" routerLinkActive="router-link-active" > Submit </button>
                     </form>
                 </div>
@@ -67,3 +60,12 @@
     </div>
     
 </body>
+
+<!--<div class="form-group">
+                            <label for="pickupTime">Hora</label>
+                            <input 
+                            type="time" 
+                            class="form-control" 
+                            formControlName="hora"
+                            placeholder="Ingrese la hora a la que buscará su pedido">
+                        </div>-->
