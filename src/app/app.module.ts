@@ -72,6 +72,7 @@ import { CrudUpdateFormMetodoPagoComponent } from './pages/crud-update-form-meto
 import { CrudUpdateFormMetodoEnvioComponent } from './pages/crud-update-form-metodo-envio/crud-update-form-metodo-envio.component';
 import { ShopPageComponent } from './pages/shop-page/shop-page.component';
 import { FilterByNamePipe } from './pipes/filter-by-name.pipe';
+import { ProductCardsDisplayComponent } from './components/product-cards-display/product-cards-display.component';
 
 
 @NgModule({
@@ -122,6 +123,7 @@ import { FilterByNamePipe } from './pipes/filter-by-name.pipe';
     CrudUpdateFormMetodoEnvioComponent,
     ShopPageComponent,
     FilterByNamePipe,
+    ProductCardsDisplayComponent,
   ],
   imports: [
     BrowserModule,
