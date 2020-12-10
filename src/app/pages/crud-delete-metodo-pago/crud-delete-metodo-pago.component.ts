@@ -26,7 +26,7 @@ export class CrudDeleteMetodoPagoComponent implements OnInit {
         (item) =>
           ({
             ...item.payload.doc.data(),
-            $key: item.payload.doc.id,
+            $key: item.payload.doc['id'],
           } as MetodoPago)
       )
     });
@@ -34,6 +34,7 @@ export class CrudDeleteMetodoPagoComponent implements OnInit {
 
   deleteMetodoPago(metodoPagoId): void{
     this.metodoPagoService.deleteMetodoPago(metodoPagoId).then(res =>{}).catch(err=>console.log(err));
+    alert("Se ha eliminado el método de pago exitosamente.");
   }
 
   activate(): boolean {

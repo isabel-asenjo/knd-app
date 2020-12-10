@@ -74,7 +74,7 @@ export class ProductFormComponent implements OnInit {
   
   createProduct(newProduct: Product): void{
     this.productService.createProduct(newProduct).then(res =>{
-       this.router.navigate(['/admin-cruds/x/read']);
+       this.router.navigate(['/admin-cruds/product/read']);
     }).catch(err => console.log(err));
   }
   
@@ -123,7 +123,7 @@ export class ProductFormComponent implements OnInit {
 
   updateProduct(data: Product): void {
     this.productService.updateProduct(data, this.productId).then((res) => {
-      this.router.navigate(['/admin-cruds/x/read']); // modificar esto
+      this.router.navigate(['/admin-cruds/product/read']); // modificar esto
     });
   }
   

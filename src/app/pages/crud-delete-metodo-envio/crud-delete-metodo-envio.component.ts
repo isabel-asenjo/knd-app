@@ -27,7 +27,7 @@ export class CrudDeleteMetodoEnvioComponent implements OnInit {
         (item) =>
           ({
             ...item.payload.doc.data(),
-            $key: item.payload.doc.id,
+            $key: item.payload.doc['id'],
           } as MetodoEnvio)
       )
     });
@@ -35,6 +35,7 @@ export class CrudDeleteMetodoEnvioComponent implements OnInit {
 
   deleteMetodoEnvio(metodoEnvioId): void{
     this.metodoEnvioService.deleteMetodoEnvio(metodoEnvioId).then(res =>{}).catch(err=>console.log(err));
+    alert("Se ha eliminado el método de envío exitosamente.");
   }
 
   activate(): boolean {

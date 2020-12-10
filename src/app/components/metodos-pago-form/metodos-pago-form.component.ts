@@ -12,6 +12,7 @@ import { MetodosPagoService } from 'src/app/services/metodos-pago.service';
 export class MetodosPagoFormComponent implements OnInit {
 
   metodoPagoForm: FormGroup = null;
+  metodosPago: Array<MetodoPago> = [];
 
   constructor(private metodosPagoService: MetodosPagoService, private fb: FormBuilder, private router: Router, private route: ActivatedRoute) { }
 
@@ -74,7 +75,55 @@ export class MetodosPagoFormComponent implements OnInit {
       adicional: this.metodoPagoForm.get('adicional').value,
     }
 
-    this.createMetodoPago(newMetodoPago);
+    if (newMetodoPago.name != ""){
+
+      if (this.editMetodoPago) {
+        var rep = 0;
+        for (var c of this.metodosPago){
+          if (c.name == newMetodoPago.name){
+            rep+=1
+            if (rep == 2){
+              alert("Ya existe un método de pago con este nombre en su base de datos.");
+              return;
+            }
+          }
+          
+        }
+        this.updateMetodoPago(newMetodoPago);
+        return;
+      }
+  
+      for (var c of this.metodosPago){
+        if (c.name == newMetodoPago.name){
+          alert("Ya existe un método de pago con este nombre en su base de datos.");
+          return;
+        }
+      }
+      this.createMetodoPago(newMetodoPago);
+      return;      
+    }
+  
+    alert("Ha ingresado algún dato inválido o ha dejado un campo vacío.");
   }
 
+
+
+  updateMetodoPago(data: MetodoPago): void {
+    this.metodosPagoService.updateMetodoPago(data, this.metodoPagoId).then((res) => {
+      this.router.navigate(['/admin-cruds/metodo-pago/read']);
+    });
+  }
+
+
+  getAllMetodosPago(): void {
+    this.metodosPagoService.getAllMetodosPago().subscribe((items) => {
+      this.metodosPago = items.map(
+        (item) =>
+          ({
+            ...item.payload.doc.data(),
+            $key: item.payload.doc['id'],
+          } as MetodoPago)
+      )
+    });
+  }
 }

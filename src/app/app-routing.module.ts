@@ -56,7 +56,7 @@ const routes: Routes = [
   { path: 'admin-cruds/category/delete', canActivate: [AuthGuard], component: CrudDeleteCategoryComponent },
   { path: 'admin-cruds/metodo-envio/create', canActivate: [AuthGuard], component: CrudCreateMetodoEnvioComponent },
   { path: 'admin-cruds/metodo-envio/read', canActivate: [AuthGuard], component: CrudReadMetodoEnvioComponent },
-  { path: 'admin-cruds/metodo-envio/update, canActivate: [AuthGuard]', component: CrudUpdateMetodoEnvioComponent },
+  { path: 'admin-cruds/metodo-envio/update', canActivate: [AuthGuard], component: CrudUpdateMetodoEnvioComponent },
   { path: 'admin-cruds/metodo-envio/:metodoEnvioId/update', canActivate: [AuthGuard], component: CrudUpdateFormMetodoEnvioComponent },
   { path: 'admin-cruds/metodo-envio/delete', canActivate: [AuthGuard], component: CrudDeleteMetodoEnvioComponent },
   { path: 'admin-cruds/metodo-pago/create', canActivate: [AuthGuard], component: CrudCreateMetodoPagoComponent },
