@@ -1,47 +1,59 @@
 <body>
     <div class="title">
         <h1>Checkout</h1>
+        <h1>Seleccione un metodo de envio</h1>
     </div>
-    <div>
-        <h2> Seleccione su metodo de envio </h2>
-    </div>
+
     <div class='sections'>
         <div class='section-container'>
+            <div class='section-title'>
+                <h2>DELIVERY</h2>
+            </div>
             <div class='section-content' id='cruds'>
-                <div class='section-content' id='purchase-records'>
-                    <div class='pr-container'>
-                        <ul>
-                            <li>
-                                <div>
-                                    
-                                </div>  
-                            </li>
-                        </ul>
-                    </div>
+                <div>
+                    <form [formGroup]="infoEnvioForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1"> Direccion </label>
+                            <input type="text" 
+                            class="form-control"
+                            formControlName="direccion"
+                            placeholder="Ingrese la direccion">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1"> Description </label>
+                            <input 
+                            type="text" 
+                            class="form-control" 
+                            formControlName="description"
+                            placeholder="Ingrese la fecha en la que desea que se efectue el envio">
+                        </div>
+                        <button type="submit" class="btn btn-primary" [routerLink]="['/checkout-pago']" routerLinkActive="router-link-active" > Submit </button>
+                    </form>
                 </div>
             </div>
-
-            <div class='section-container'>
-
-                <div class='section-content' id='purchase-records'>
-                    <div class='pr-container'>
-                        <ul>
-                            <li> <!--*ngFor="let record of records;-->
-                                <div class='purchase-record'>
-                                    <div class='purchase-id'>ID #</div>
-                                    <div class='purchase-info'>
-                                        <p>blablabla</p>
-                                        <!--USERNAME: {{record.username}} ; PRICE: ${{record.price}} ; STATUS: {{record.status}}-->
-                                    </div>
+        </div>
+        
+        <div class='section-container'>
+            <div class='section-title'>
+                <h2>PICK-UP</h2>
+            </div>
+            <div class='section-content' id='purchase-records'>
+                <div class='pr-container'>
+                    <ul>
+                        <li *ngFor="let compra of compras">
+                            <div class='purchase-record' >
+                                <div class='purchase-id'>ID #</div>
+                                <div class='purchase-info'>
+                                    <p>USERNAME: {{compra.clientId}} ; PRICE: ${{compra.precio}} ; STATUS: {{compra.estatus}}</p>
                                 </div>
-                            </li>
-                        </ul>
-                    </div>
-                    
+                            </div>
+                        </li>
+                        
+                    </ul>
                 </div>
                 
             </div>
-
+            
         </div>
     </div>
     
