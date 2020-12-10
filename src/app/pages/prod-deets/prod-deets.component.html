@@ -1,0 +1,46 @@
+<body>
+    
+    <div class='breadcrumbs'>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href='/shop'>TIENDA</a></li>
+              <li class="breadcrumb-item active" aria-current="page">{{producto.name}}</li>
+            </ol>
+          </nav>
+    </div>
+
+    <div class='content'>
+        <ng-card>
+            <ng-card-title>
+                <h1>{{producto.name}}</h1>
+            </ng-card-title>
+            <ng-card-content>
+                <div class='imagen'>
+                    <img class="card__image card__image--fence" src="{{producto.imageUrl}}" alt="{{producto.name}}">
+                </div>
+                <div class='info'>
+                    <div class='text'>
+                        <h4>Descripción: </h4>{{producto.description}}<br><br>
+                        <h4>Precio por Kg: </h4>${{producto.price}}<br><br>
+                        <h4>Categoría: </h4>{{producto.category}}<br><br>
+                    </div>
+                    <div *ngIf='isAuthenticated'>
+                        <form [formGroup]="addItemToBagForm">
+                            <div class="form-group">
+                                <label for="amntCandy"> <h4>Cantidad(gr)*</h4> </label>
+                                <input 
+                                type="number" 
+                                class="form-control" 
+                                formControlName="amnt"
+                                placeholder="Seleccione cantidad de gramos a adquirir">
+                            </div> 
+                        </form>
+                    </div>
+                </div>
+                <div class='buttons'>
+                    <button md-button (click)='addToBag()' *ngIf='isAuthenticated'>Agregar a la bolsa</button>
+                </div>
+            </ng-card-content>
+        </ng-card>
+    </div>
+</body>

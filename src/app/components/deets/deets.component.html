@@ -1,0 +1,12 @@
+<ng-card *ngIf='producto'>
+    <ng-card-title>
+        Detalles del producto
+    </ng-card-title>
+    <ng-card-content>
+        Nombre: {{producto.name}}<br>
+        Descripción: {{producto.description}}<br>
+        Precio: {{producto.price}}<br>
+        Categoría: {{producto.category}}<br>
+        <button md-button (click)='onClose()'>Cerrar</button>
+    </ng-card-content>
+</ng-card>

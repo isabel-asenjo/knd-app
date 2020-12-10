@@ -52,12 +52,12 @@ export class ShopPageComponent implements OnInit {
   }
 
 
-  showDeets(prodId: string): void{
-    this.productService.getProduct(prodId).subscribe(item =>{
+  showDeets(prodId: string, prod: Product): void{
+    this.productService.getProduct(prod.$key).subscribe(item =>{
       this.singleProd = item.payload.data();
       $key: item.payload["id"],
       
-      this.router.navigate(['products/:this.prodId']);
+      this.router.navigate(['products/:prodId']);
       return this.singleProd;
     })
     

@@ -74,6 +74,8 @@ import { ShopPageComponent } from './pages/shop-page/shop-page.component';
 import { FilterByNamePipe } from './pipes/filter-by-name.pipe';
 import { CheckoutPageComponent } from './pages/checkout-page/checkout-page.component';
 import { CheckoutPagePagoComponent } from './pages/checkout-page-pago/checkout-page-pago.component';
+import { ProdDeetsComponent } from './pages/prod-deets/prod-deets.component';
+import { DeetsComponent } from './components/deets/deets.component';
 
 
 @NgModule({
@@ -126,6 +128,8 @@ import { CheckoutPagePagoComponent } from './pages/checkout-page-pago/checkout-p
     FilterByNamePipe,
     CheckoutPageComponent,
     CheckoutPagePagoComponent,
+    ProdDeetsComponent,
+    DeetsComponent,
   ],
   imports: [
     BrowserModule,

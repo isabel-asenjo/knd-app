@@ -1,0 +1,127 @@
+@import 'src/app/styles/lib/variables';
+
+body {
+    background-image: $color-bg-gradient;
+    align-items: center;
+    font-family: $font-text;
+    font-size: larger;
+    overflow: hidden;
+
+    .content{
+        display: flex;
+    }
+
+    h1{
+        font-family: $font-titles;
+        padding-bottom: 2rem;
+    }
+
+    h4{
+        color: $color-free-speech-magenta;
+    }
+}
+
+
+.title{
+    font-family: $font-titles;
+    text-align: center;
+    padding: 15vh;
+}
+
+
+
+ul {
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+
+.fas{
+    color: back;
+}
+
+
+
+
+
+.pr-container{
+    overflow-y: scroll;
+    border-radius: 15px;
+    height: 200px;
+    width: 98%;
+}
+
+.pr-container::-webkit-scrollbar{
+    width: 10px;
+    background:transparent;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.pr-container::-webkit-scrollbar-thumb{
+    background: #808080;
+    border-radius: 15px;
+}
+
+.breadcrumbs{
+    width: 100vw;
+    padding-left: 10%;
+    padding-top: 5rem;
+}
+
+
+.breadcrumb {
+    background: transparent;
+    font-size: large;
+}
+
+.breadcrumb-item.active {
+    color: $color-gold;
+}
+
+
+
+
+
+ng-card{
+    //background-color: white;
+    //border-radius: 1rem;
+    width: 80vw;
+    height: 60vh;
+    margin: 10rem;
+    margin-top: 0;
+
+    ng-card-content{
+        display: flex;
+        flex-direction: row;
+
+        .info{
+            padding: 2.5rem;
+            padding-top: 0;
+        }
+    }
+}
+
+.imagen{
+    height: 60vh;
+    overflow: hidden;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.buttons{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    button{
+        color: white;
+        background-color: $color-dark-turquoise;
+        box-shadow: 0 5px 10px -3.5px rgba(0,0,0,0.25);
+        border: none;
+        border-radius: 0.25rem;
+    }
+}

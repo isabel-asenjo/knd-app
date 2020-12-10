@@ -6,9 +6,9 @@
         <div class='filter'>
             <h2>Filtra tu búsqueda</h2>
             <div class='filter-buttons'>
-                <button class='btn active' ng-click='changeBtnStyle()' [routerLink]="['/admin-cruds/product/create']" routerLinkActive="router-link-active">PRECIO</button>
-                <button class='btn active' ng-click='changeBtnStyle()' [routerLink]="['/admin-cruds/product/read']" routerLinkActive="router-link-active" >PRODUCTO</button>
-                <button class='btn active'[routerLink]="['/admin-cruds/product/update']" routerLinkActive="router-link-active">CATEGORÍA</button>
+                <button class='btn active' ng-click='changeBtnStyle()' >PRECIO</button>
+                <button class='btn active' ng-click='changeBtnStyle()' >PRODUCTO</button>
+                <button class='btn active'>CATEGORÍA</button>
             </div>
             <div class='filter-input'>
                 <form class="form-inline">
@@ -22,9 +22,9 @@
         <div class='container2'>
             <div class='products'>
                 <div class='options'>
-                    <button class='btn active' ng-click='changeBtnStyle()' [routerLink]="['/admin-cruds/product/create']" routerLinkActive="router-link-active">PRECIO</button>
+                    <!--<button class='btn active' ng-click='changeBtnStyle()' [routerLink]="['/admin-cruds/product/create']" routerLinkActive="router-link-active">PRECIO</button>
                     <button class='btn active' ng-click='changeBtnStyle()' [routerLink]="['/admin-cruds/product/read']" routerLinkActive="router-link-active" >PRODUCTO</button>
-                    <button class='btn active'[routerLink]="['/admin-cruds/product/update']" routerLinkActive="router-link-active">CATEGORÍA</button>
+                    <button class='btn active'[routerLink]="['/admin-cruds/product/update']" routerLinkActive="router-link-active">CATEGORÍA</button>-->
                         
                 </div>
                 <div class='product-cards'>
@@ -33,7 +33,7 @@
                         <div class="card">
                             <img class="card__image card__image--fence" src="{{prod.imageUrl}}" alt="{{prod.name}}">
                             
-                            <button class="btn btn--block card__btn" (click)='showDeets(prod.name)'>{{prod.name}} - ${{prod.price}}</button>
+                            <button md-button class="btn btn--block card__btn" [routerLink]="['/shop', prod.$key]">{{prod.name}} - ${{prod.price}}</button> <!--(click)='showDeets(prod.$key, prod)' -->
                             
                         </div>
                         </li>
