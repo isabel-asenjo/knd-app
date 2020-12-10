@@ -33,6 +33,8 @@ import { CrudUpdateFormMetodoPagoComponent } from './pages/crud-update-form-meto
 import { CrudUpdateFormMetodoEnvioComponent } from './pages/crud-update-form-metodo-envio/crud-update-form-metodo-envio.component';
 import { ShopPageComponent } from './pages/shop-page/shop-page.component';
 import { AuthGuard } from './guards/auth.guard';
+import { CheckoutPageComponent } from './pages/checkout-page/checkout-page.component';
+import { CheckoutPagePagoComponent } from './pages/checkout-page-pago/checkout-page-pago.component';
 
 
 
@@ -40,6 +42,8 @@ const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'about', component: AboutPageComponent },
   { path: 'shop', component: ShopPageComponent },
+  { path: 'checkout', component: CheckoutPageComponent },
+  { path: 'checkout-pago', component: CheckoutPagePagoComponent },
   { path: 'contact', component: ContactPageComponent },
   { path: 'login', component: LoginPageComponent },
   { path: 'admin', canActivate: [AuthGuard], component: AdminMainPageComponent },

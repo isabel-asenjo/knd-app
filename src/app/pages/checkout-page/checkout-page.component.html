@@ -1,0 +1,46 @@
+<body>
+    <div class="title">
+        <h1>Checkout</h1>
+    </div>
+    <div>
+        <h2> Seleccione su metodo de envio </h2>
+    </div>
+    <div class='sections'>
+        <div class='section-container'>
+            <div class='section-title'>
+                <h2>METODOS DE ENVIO</h2>
+            </div>
+            <div class='section-content' id='cruds'>
+                <div class='section-content' id='purchase-records'>
+                    <div class='pr-container'>
+                        <ul>
+                            <li>
+                                <div>
+                                    <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col"> Nombre </th>
+                                            <!--<th scope="col"> Descripcion </th>
+                                            <th scope="col"> Informacion adicional </th>-->
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr *ngFor="let metodoEnvio of metodosEnvio">
+                                            <th scope="row">{{ metodoEnvio.name }}</th>
+                                            <!--<th scope="row">{{ metodoEnvio.description }}</th>
+                                            <th scope="row">{{ metodoEnvio.adicional }}</th>-->
+                                            <a class="btn btn-primary" [routerLink]="['/checkout-pago']" routerLinkActive="router-link-active"> Seleccionar </a>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>  
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+</body>

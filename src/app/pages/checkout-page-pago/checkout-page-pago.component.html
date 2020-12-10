@@ -1,0 +1,46 @@
+<body>
+    <div class="title">
+        <h1>Checkout</h1>
+    </div>
+    <div>
+        <h2> Seleccione su metodo de pago </h2>
+    </div>
+    <div class='sections'>
+        <div class='section-container'>
+            <div class='section-title'>
+                <h2>METODOS DE PAGO</h2>
+            </div>
+            <div class='section-content' id='cruds'>
+                <div class='section-content' id='purchase-records'>
+                    <div class='pr-container'>
+                        <ul>
+                            <li>
+                                <div>
+                                    <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col"> Nombre </th>
+                                            <!--<th scope="col"> Descripcion </th>
+                                            <th scope="col"> Informacion adicional </th>-->
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr *ngFor="let metodoPago of metodosPago">
+                                            <th scope="row">{{ metodoPago.name }}</th>
+                                            <!--<th scope="row">{{ metodoPago.description }}</th>
+                                            <th scope="row">{{ metodoPago.adicional }}</th>-->
+                                            <a class="btn btn-primary" [routerLink]="['/checkout-final']" routerLinkActive="router-link-active"> Seleccionar </a>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>  
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
