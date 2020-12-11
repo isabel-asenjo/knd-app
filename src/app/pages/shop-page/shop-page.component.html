@@ -14,7 +14,7 @@
                 <form class="form-inline">
                     <p>Buscar por nombre: </p>
                     <div>
-                        <input type="text" class="form-control mr-sm-2" name="filterName" placeholder="Search" aria-label="Search" [(ngModel)]="filterName">
+                        <input type="text" class="form-control mr-sm-2" name="filterName" placeholder="Search" aria-label="Search" [(ngModel)]="filterByName">
                     </div>
                 </form>
             </div>
@@ -29,7 +29,7 @@
                 </div>
                 <div class='product-cards'>
                     <ul class="cards">
-                        <li class="cards__item" *ngFor="let prod of products | filterByName:filterName ">
+                        <li class="cards__item" *ngFor="let prod of products | filterByName:filterByName ">
                         <div class="card">
                             <img class="card__image card__image--fence" src="{{prod.imageUrl}}" alt="{{prod.name}}">
                             

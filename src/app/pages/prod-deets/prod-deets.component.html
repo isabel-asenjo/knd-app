@@ -10,11 +10,11 @@
     </div>
 
     <div class='content'>
-        <ng-card>
-            <ng-card-title>
+        <div class ='ng-card'>
+            <div class='ng-card-title'>
                 <h1>{{producto.name}}</h1>
-            </ng-card-title>
-            <ng-card-content>
+            </div>
+            <div class='ng-card-content'>
                 <div class='imagen'>
                     <img class="card__image card__image--fence" src="{{producto.imageUrl}}" alt="{{producto.name}}">
                 </div>
@@ -41,7 +41,7 @@
                     <button md-button (click)='addToBag()' *ngIf='isAuthenticated'>Agregar a la bolsa</button>
                     <button md-button (click)='addToWishlist()' *ngIf='isAuthenticated'>Agregar a la lista de deseos</button>
                 </div>
-            </ng-card-content>
-        </ng-card>
+            </div>
+        </div>
     </div>
 </body>

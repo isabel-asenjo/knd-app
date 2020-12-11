@@ -85,7 +85,7 @@ ul {
 
 
 
-ng-card{
+.ng-card{
     //background-color: white;
     //border-radius: 1rem;
     width: 80vw;
@@ -93,7 +93,7 @@ ng-card{
     margin: 10rem;
     margin-top: 0;
 
-    ng-card-content{
+    .ng-card-content{
         display: flex;
         flex-direction: row;
 

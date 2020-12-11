@@ -31,7 +31,7 @@ export class ShopPageComponent implements OnInit {
   bags: Array<Bolsa>;
 
   constructor(private clienteService : ClienteService, private bolsaService : BolsaService, private productService : ProductsService, private router: Router, private route: ActivatedRoute, private authService: AuthService) { }
-  filterProd = '';
+  filterByName = '';
   p: number = 1;
 
   ngOnInit(): void {
